@@ -1,8 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import ItemTop from "../../common/ItemTop";
 import * as p from "../style/PayCompleteStyle";
 
 const PayComplete = () => {
+
+    const nav = useNavigate();
+
     return(
         <p.PayCompleteWrap>
         <ItemTop title='상품상세'/>
@@ -31,7 +35,7 @@ const PayComplete = () => {
                     <p><span>할부개월</span>일시불</p>
                 </p.PayMentHistoryDetail>
             </p.PayMentHistory>
-            <p.Btn>확인</p.Btn>
+            <p.Btn onClick={()=>nav('/subscribe')}>확인</p.Btn>
         </p.PayCompleteWrap>
     )
 }
