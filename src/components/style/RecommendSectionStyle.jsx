@@ -2,8 +2,10 @@ import styled from "styled-components";
 
 
 export const StoreRecommendBox = styled.div`
-    height: 29.4118vh;
+    height: 63.6667vw;
     padding: 1.9608vh 0 0 4.4444vw;
+    width: 100%;
+    
     p{
         font-family: 'Spoqa Han Sans Neo';
         font-style: normal;
@@ -11,14 +13,17 @@ export const StoreRecommendBox = styled.div`
         font-size: 4.4444vw;
     }
 `
-export const StoreRecommendUl = styled.ul`
-    height: 23.5294vh;
-    display: flex;
-    justify-content: space-between;
+export const StoreRecommendItemBox = styled.div`
+    width: 100vw;
     overflow: scroll;
-    ::-webkit-scrollbar{
-        display: none;
-    }
+`
+export const StoreRecommendUl = styled.ul`
+    
+    height: 56.6667vw;
+    display: inline-flex;
+    justify-content: space-between;
+    
+    
 `
 export const StoreRecommendLi = styled.li`
     width: 28.8889vw;
@@ -32,7 +37,7 @@ export const StoreRecommendLi = styled.li`
 `
 export const StoreRecommendImg = styled.div`
     width: 28.8889vw;
-    height: 12.7451vh;
+    height: 28.8889vw;
     border: 1px solid #ccc;
     border-radius: 16px;
 `

@@ -27,13 +27,13 @@ export const MainTitle = styled.div`
 export const BoxArea = styled.div`
     display: flex;
     justify-content: space-between;
-    padding: 0 4.4444vw;
+    padding-left: 4.4444vw;
 `
 export const LeftBoxArea = styled.div`
     width: 54%;
     height: 40vh;
     background-color: #5D5FEE;
-
+    
     box-shadow: 4px 4px 4px #ccc;
     border-radius: 14px;
     p:nth-child(1){
@@ -77,6 +77,8 @@ export const RightBoxArea = styled.div`
     justify-content: space-between;
     width: 42%;
     height: 40vh;
+    padding-bottom:10px;
+    padding-right: 4.4444vw;
 `
 export const ContentBox = styled.div`
     width: 100%;
@@ -118,6 +120,7 @@ export const Flex = styled.div`
     ${ContentBox}{
         width: 48%;
         margin-top: 20px;
+        margin-bottom: 10px;
         height: 10vh;
         p{
             font-family: 'Spoqa Han Sans Neo';

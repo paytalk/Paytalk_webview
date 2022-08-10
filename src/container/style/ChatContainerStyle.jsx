@@ -36,7 +36,7 @@ export const ChatListUl = styled.ul`
 export const ChatListLi = styled.li`
     display: flex;
     width: 100%;
-    height: 8.8vh;
+    height: 19.4444vw;
     border-bottom: 1px solid #EEE;
     padding: 1.5vh 4.4444vw;
 `
@@ -57,11 +57,12 @@ export const ChatName = styled.p`
     font-size: 4vw;
 `
 export const ChatMem = styled.span`
+    display: inline-block;
     font-size: 3.5vw;
     padding-top: 0vh; 
     padding-left: 2vw;
     color: #ccc;
-
+    transform: translateY(-1vw);
 `
 export const ChatPrev =styled.p`
     display: block;

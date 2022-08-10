@@ -1,6 +1,12 @@
 import styled from 'styled-components'
 import {HiArrowNarrowLeft} from 'react-icons/hi'
 
+export const Gubun = styled.div`
+    width: 100%;
+    height: 1vh;
+    background: #EEEEEE;
+`
+
 export const SellerProfileWrap = styled.div`
     position: fixed;
     width: 100vw;
@@ -19,10 +25,11 @@ export const BackIcon = styled(HiArrowNarrowLeft)`
 export const SellerProfileTop = styled.div`
     display: flex;
     margin: 2vh 2.2222vw 2vh 4.4444vw;
+    height: 16.6667vw;
 `
 export const SellerProfile = styled.div`
     width: 15.5556vw;
-    height: 7.0000vh;
+    height: 15.5556vw;
     border-radius: 16px;
     background:#D9D9D9;
 `
@@ -60,7 +67,7 @@ export const Btn = styled.div`
     font-style: normal;
     font-weight: 700;
     font-size: 3.8889vw;
-    line-height: 4vh;
+    line-height: 8.8889vw;
     text-align: center;
     margin-right: 2.222vw;
     color: #FFFFFF;
@@ -80,13 +87,227 @@ export const SellerTabLi = styled.li`
     width: 25.0000vw;
     font-family: 'Pretendard';
     font-style: normal;
-    font-weight: 400;
+    font-weight: ${props=> props.pin == 'pin' ? '700' : '400'};;
     font-size: 14px;
     line-height: 17px;
-    color: #666666;
+    color: ${props=> props.pin == 'pin' ? '#000' : '#666666'};
     text-align: center;
-    &:hover, &:checked{
-        color: #000;
-        border-bottom: 2px solid #000;
+    border-bottom: ${props=> props.pin == 'pin' ? '2px solid #000' : 'none'};
+`
+export const ContentBox = styled.div`
+    width: 100%;
+    height: 75vh;
+    background: #fff;
+    overflow: scroll;
+    
+`
+export const ContentBoxUl = styled.ul`
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2vh 4.4444vw 0 4.4444vw;
+`
+
+export const ContentBoxLi = styled.li`
+    width: 44.4444vw;
+`
+
+export const ContentImg = styled.div`
+    width: 44.4444vw;
+    height: 44.4444vw;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+`
+
+export const ContentTitle = styled.div`
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.8889vw;
+    color: #181818;
+    margin: 1vh 0;
+`
+export const ContentCost = styled.div`
+    text-align: right;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5.0000vw;
+    color: #181818;
+    margin-bottom: 2vh;
+    span{
+        margin-right: 1vw;
+        font-weight: 400;
+        font-size: 3.8889vw;
+        color: #666666;
+    }
+`
+export const NoticeLi = styled.li`
+    width: 91.1111vw;
+    height: 15.5556vw;
+    background: #F8F8F8;
+    border-radius: 8px;
+    margin-bottom: 1vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4.4444vw;
+    h3{
+        font-family: 'Pretendard';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 3.8889vw;
+        line-height: 15.5556vw;
+        color: #181818;
+    }
+    p{
+        font-family: 'Pretendard';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 3.3333vw;
+        line-height: 15.5556vw;
+        color: #666666;
+    }
+`
+export const InfoBox = styled.div`
+    
+`
+export const InfoTitle = styled.div`
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #666666;
+    margin: 2vh 4.4444vw 2vh 4.4444vw;
+`
+export const BasicInfo = styled.div`
+    margin: 2vh 4.4444vw 1vh 4.4444vw;
+    span{
+        width: 13.3333vw;
+        margin-right: 2.2222vw;
+        font-family: 'Spoqa Han Sans Neo';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        display: inline-flex;
+        color: #BCBCBC;
+    }
+    p{
+        margin-bottom: 1vh;
+        font-family: 'Spoqa Han Sans Neo';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 11px;
+        color: #666666;
+    }
+`
+export const SnsLink = styled.div`
+    margin-bottom: 2vh;
+    margin-left: 4.4444vw;
+`
+export const Sns = styled.div`
+    
+`
+export const SnsImg = styled.div`
+    display: inline-block;
+    width: 5.5556vw;
+    height: 5.5556vw;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-right: 2.7778vw;
+    margin-bottom: 1vh;
+`
+export const SnsText = styled.div`
+    margin-bottom: 1vh;
+    display: inline-block;
+    transform: translateY(-0.5vh);
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.0556vw;
+    color: #666666;
+`
+export const CompanyInfo = styled.div`
+    margin: 2vh 4.4444vw 1vh 4.4444vw;
+    span{
+        width: 13.3333vw;
+        margin-right: 2.2222vw;
+        font-family: 'Spoqa Han Sans Neo';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        display: inline-flex;
+        color: #BCBCBC;
+        word-break: keep-all;
+    }
+    p{
+        margin-bottom: 1vh;
+        font-family: 'Spoqa Han Sans Neo';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 11px;
+        color: #666666;
+    }
+`
+export const ReviewLi = styled.li`
+    
+`
+export const ReviewImg = styled.div`
+    width: 91.1111vw;
+    height: 53.3333vw;
+    border: 1px solid #ccc;
+    background-color: #ccc;
+    border-radius: 8px;
+`
+
+export const ReviewTitle = styled.div`
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4.4444vw;
+    line-height: 19px;
+    color: #181818;
+    margin: 2.2222vw 0;
+`
+
+export const ReviewText = styled.div`
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.8889vw;
+    line-height: 17px;
+    color: #666666;
+    padding-bottom: 2.4444vw;
+    margin-bottom: 2.2222vw;
+    border-bottom: 1px solid #EEEEEE;
+`
+
+export const ReviewerNick = styled.div`
+    margin-top: 2.2222vw;
+    p{
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.3333vw;
+    display: flex;
+    align-items: center;
+
+    color: #666666;
+    }
+    
+    span{
+        font-family: 'Pretendard';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 3.3333vw;
+        color: #666666;
+    }
+    span::after{
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 10px;
+        background-color: rgba(0, 0, 0, 0.2);
+        margin: 0 2.4444vw 4px 2.4444vw;
+        vertical-align: bottom;
     }
 `

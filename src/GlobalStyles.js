@@ -39,7 +39,12 @@ const GlobalStyle = createGlobalStyle`
 
     /* 공통 부분 */
 
-* { margin: 0; padding:0; font-size:10px; -webkit-tap-highlight-color : rgba(0,0,0,0) ;}
+* { margin: 0; padding:0; font-size:10px; -webkit-tap-highlight-color : rgba(0,0,0,0);
+overflow: hidden;
+::-webkit-scrollbar{
+        display: none;
+    }
+}
 
 
 

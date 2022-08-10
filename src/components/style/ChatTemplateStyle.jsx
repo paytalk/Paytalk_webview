@@ -8,11 +8,13 @@ export const ChatTemplateWrap = styled.div`
     width: 100%;
     height: 100vh;
     z-index: 2;
+    overflow: hidden;
     background-color: #fff;
 `
 export const ChatTemplateArea = styled.div`
     width: 100%;
     height: 100%;
+    overflow: hidden;
 `
 export const Top = styled.div`
     width: 100%;
@@ -40,7 +42,7 @@ export const History = styled.div`
     overflow: ${(props)=> props.overflow};
     background-color:#EEEEEE;
     position: absolute;
-    z-index: 999;
+    z-index: 888;
     p{
         font-family: 'Spoqa Han Sans Neo';
         font-style: normal;
@@ -157,7 +159,7 @@ export const ChatName = styled.div`
 `
 export const ChatProfile = styled.div`
     width: 8.8889vw;
-    height: 4.0000vh;
+    height: 8.8889vw;
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #F8F8F8;
@@ -166,7 +168,7 @@ export const ChatProfile = styled.div`
 export const Chat = styled.div`
     position: absolute;
     width: 56.6667vw;
-    height: 14.0000vh;
+    height: 31.1111vw;
     background-color: #F8F8F8;
     border-radius: 16px;
     transform: translate(8.8889vw,-0.7vh);

@@ -11,7 +11,7 @@ export const ChatSideWrap = styled.div`
     width: 72.2222vw;
     height: 87.5vh;
     background-color: #fff;
-    z-index: 1;
+    z-index: 999;
     overflow: scroll;
     top: 6.1vh;
     right: ${(props)=>(props.position)};

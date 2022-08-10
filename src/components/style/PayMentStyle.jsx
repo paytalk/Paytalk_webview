@@ -54,7 +54,7 @@ export const CreditCard =styled.div`
 export const CheckBox = styled.div`
     display: inline-block;
     width: 6.6667vw;
-    height: 3.0000vh;
+    height: 6.6667vw;
     background: ${props=> props.checked == 'checked' ? "#5C63E5" : "#BCBCBC"};
     border-radius: 9px;
     margin: 1vh 2.2222vw 0 4.4444vw;
@@ -127,7 +127,7 @@ export const ItemArea = styled.div`
 `
 export const ImgArea = styled.div`
     width: 22.2222vw;
-    height: 10.0000vh;
+    height: 22.2222vw;
     border-radius: 16px;
     background-color: #181818;
 `

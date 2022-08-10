@@ -31,7 +31,7 @@ export const ItemArea = styled.div`
 `
 export const ImgArea = styled.div`
     width: 22.2222vw;
-    height: 10.0000vh;
+    height: 22.2222vw;
     border-radius: 16px;
     background-color: #181818;
 `

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StoreContainerWrap = styled.div`
-    height: 100vh;
+    height: 90vh;
     overflow: scroll;
     position: relative;
     width: 100%;
@@ -45,7 +45,6 @@ export const StoreCategoryBox = styled.div`
 export const StoreCategoryUl = styled.ul`
     display: flex;
     justify-content: space-between;
-    
     flex-wrap: wrap;
 `
 export const StoreCategoryLi = styled.li`

@@ -17,12 +17,16 @@ const ChatTemplate = () => {
                 <c.Top>
                     <c.BackBtn onClick={()=>nav(-1)}></c.BackBtn>
                     <c.Name>넷플릭스</c.Name>
-                    <c.MenuBtn onClick={()=>setSide(!side)}></c.MenuBtn>
+                    <c.MenuBtn onClick={()=>{
+                        setSide(!side)
+                        setHistory(false)
+                        }}></c.MenuBtn>
                 </c.Top>
                 <c.History overflow = {history ? "hidden" : "scroll"} height ={history ? "87.5vh" : "5vh"}>
                     <p onClick={()=> {
                         setHistory(!history)
                         setOpen(-1)
+                        setSide(false)
                     }}>거래내역</p>
                     <c.HistoryDetail>
                         2022년 7월
@@ -92,7 +96,10 @@ const ChatTemplate = () => {
                 </c.History>
                 <c.ChatArea>
                         <c.ChatSample text ='left'>
-                            <c.ChatProfile onClick={()=>setModal(true)}></c.ChatProfile>
+                            <c.ChatProfile onClick={()=>{
+                                setModal(true)
+                                setSide(false)
+                                }}></c.ChatProfile>
                             <c.ChatName>넷플릭스</c.ChatName>
                             <c.Chat>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum id id in turpis. Volutpat in lacus senectus a mauris libero dictum nulla.</c.Chat>
                         </c.ChatSample>
@@ -100,7 +107,10 @@ const ChatTemplate = () => {
                 <c.ChatInputArea></c.ChatInputArea>
             </c.ChatTemplateArea>
             {side ? <ChatSide position='0'/> : <ChatSide position='-100%'/>}
-            {modal ? <SellerProfile OnClick={()=>setModal(false)} position ='0'/> : <SellerProfile position ='-100%' />}
+            {modal ? <SellerProfile OnClick={()=>{
+                setModal(false)
+                
+                }} position ='0'/> : <SellerProfile position ='-100%' />}
         </c.ChatTemplateWrap>
     )
 }
