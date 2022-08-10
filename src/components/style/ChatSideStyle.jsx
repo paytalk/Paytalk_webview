@@ -26,7 +26,7 @@ export const Title = styled.div`
     font-weight: 400;
     font-size: 3.3333vw;
     color: #666666;
-    
+    padding: 2vh 3.3333vw 1vh 3.3333vw;
 `
 
 export const MediaBox = styled.div`
@@ -72,7 +72,7 @@ export const ItemUl = styled.ul`
 `
 export const Top = styled.div`
     display: flex;
-    padding: 2vh 3.3333vw 1vh 3.3333vw;
+    
     justify-content: space-between;
 `
 export const Icon = styled(HiChevronRight)`

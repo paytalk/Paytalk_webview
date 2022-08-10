@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { BiArrowBack } from "react-icons/bi";
 import { BiMenu } from "react-icons/bi";
+import {HiChevronDown} from "react-icons/hi"
 
 export const ChatTemplateWrap = styled.div`
     position: relative;
@@ -33,9 +34,102 @@ export const Name = styled.div`
     font-size: 3vh;
 `
 
+export const History = styled.div`
+    width: 100%;
+    height: ${(props) => props.height};
+    overflow: ${(props)=> props.overflow};
+    background-color:#EEEEEE;
+    position: absolute;
+    z-index: 999;
+    p{
+        font-family: 'Spoqa Han Sans Neo';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 3.8889vw;
+        color: #666666;
+        text-align: center;
+        line-height: 5vh;
+    }
+    transition: all 0.5s linear;
+`
+export const HistoryDetail = styled.div`
+    width: 91.1111vw;
+    height: 4.0000vh;
+    background-color: #bcbcbc;
+    border-radius: 16px;
+    margin: 1vh auto 0 auto;
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.8889vw;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 4.000vh;
+`
+export const HistoryItemUl = styled.ul`
+    margin-top:2vh;
+`
+export const HistoryItemLi = styled.li`
+    margin: 0 auto 1vh auto;
+    width: 91.1111vw;
+    height: ${(props)=> props.height};
+    background-color: #ffffff;
+    border-radius : 8px;
+    border: 1px solid #EEEEEE;
+    overflow: hidden;
+`
+export const ItemTitle = styled.div`
+    display: flex;
+    margin: 0 4.4444vw;
+    justify-content: space-between;
+    p{
+        font-family: 'Spoqa Han Sans Neo';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 4.4444vw;
+        color: #181818;
+    }
+`
+export const ItemThe = styled(HiChevronDown)`
+    font-size: 8.4444vw;
+    margin-top: 0.3vh;
+    color: #666666;
+`
+export const cost = styled.div`
+    margin: 0 4.4444vw;
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4.4444vw;
+    color: #666666;
+`
+export const ItemDetail = styled.div`
+    border-top: 1px solid #ccc;
+    margin-top: 2.2vh;
+    padding-left: 4.4444vw;
+    p{
+        margin-top: 1.8vh;
+        line-height: 3.0556vw;
+        margin-bottom: 1vh;
+        font-size: 3.0556vw;
+        text-align: left;
+        font-weight: 700;
+    }
+    span{
+        display: inline-block;
+        width: 13.3333vw;
+        font-weight: 400;
+        margin-right: 2.2222vw;
+    }
+
+`
+
+
+
 export const ChatArea = styled.div`
     width: 100%;
-    height: 87.5vh;
+    height: 82.5vh;
+    margin-top: 5vh;
     background-color: #cfd8dc;
 `
 export const ChatInputArea = styled.div`
@@ -52,6 +146,7 @@ export const ChatSample = styled.div`
 
 `
 export const ChatName = styled.div`
+    position: absolute;
     font-family: 'Spoqa Han Sans Neo';
         font-style: normal;
         font-weight: 700;
@@ -69,17 +164,17 @@ export const ChatProfile = styled.div`
     
 `
 export const Chat = styled.div`
+    position: absolute;
     width: 56.6667vw;
     height: 14.0000vh;
     background-color: #F8F8F8;
     border-radius: 16px;
-    transform: translate(8.8889vw,-2.3vh);
+    transform: translate(8.8889vw,-0.7vh);
     font-family: 'Spoqa Han Sans Neo';
     font-style: normal;
     font-weight: 400;
     font-size: 3.8889vw;
     line-height: 140%;
-/* or 20px */
     padding-top: 1vh;
     padding-left: 2.2222vw;
 
