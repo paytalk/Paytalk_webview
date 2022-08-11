@@ -175,7 +175,7 @@ export const InfoTitle = styled.div`
     font-family: 'Spoqa Han Sans Neo';
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 3.8889vw;
     color: #666666;
     margin: 2vh 4.4444vw 2vh 4.4444vw;
 `

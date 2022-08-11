@@ -6,7 +6,7 @@ const nav = [
     {id: '1',title :'홈' , url : '/'}
     , {id : '3',title : '스토어' , url : '/store'}
     , {id : '2',title : '채팅' , url : '/chat'}
-    , {id : '5',title :'더보기' , url : '/the'}
+    , {id : '5',title :'더보기' , url : '/more'}
 ];
 
 

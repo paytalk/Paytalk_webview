@@ -10,6 +10,8 @@ import StoreDetailPage from './pages/StoreDetailPage';
 import ItemDetailPage from './pages/ItemDetailPage';
 import PayMentPage from './pages/PayMentPage';
 import PayCompletePage from './pages/PayCompletePage';
+import MorePage from './pages/MorePage';
+import GooTalkInfoPage from './pages/GooTalkInfoPage';
 
 
 function App() {
@@ -20,14 +22,16 @@ function App() {
     <Routes>
       <Route path='/' element ={<MainPage />} />
       <Route path='/subscribe' element={<SubscribeDetailPage />} />
+      <Route path ='/subscribe/*' element={<GooTalkInfoPage />} />
       <Route path = '/store' element = {<StorePage />} />
       <Route path = '/store/Item' element = {<ItemDetailPage />} />
       <Route path = '/store/Detail' element ={<StoreDetailPage />} />
       <Route path = '/store/Pay' element = {<PayMentPage />} />
       <Route path = 'store/PayComplete' element = { <PayCompletePage />} />
       <Route path ='/chat' element= { <ChatPage />} />
-      
       <Route path ='/chat/*' element = {<ChatDetailPage />} />
+      <Route path = '/more' element = {<MorePage />} />
+
     </Routes>
   );
 }
