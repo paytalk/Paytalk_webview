@@ -35,6 +35,7 @@ const PayComplete = () => {
                     <p><span>할부개월</span>일시불</p>
                 </p.PayMentHistoryDetail>
             </p.PayMentHistory>
+            
             <p.Btn onClick={()=>nav('/subscribe')}>확인</p.Btn>
         </p.PayCompleteWrap>
     )

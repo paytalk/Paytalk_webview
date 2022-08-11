@@ -5,6 +5,7 @@ import App from './App';
 import GlobalStyle from './GlobalStyles';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Nav from './common/Nav';
+import "./common.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

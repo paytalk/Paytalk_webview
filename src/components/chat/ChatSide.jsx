@@ -24,7 +24,7 @@ const ChatSide = ({position}) => {
                 <c.Icon></c.Icon>
                 </c.Top>
                 <c.ItemUl>
-                    <c.ItemLi>
+                    {/* <c.ItemLi>
                         <c.ItemImg></c.ItemImg>
                         <c.ItemInfo>레노버 아이디어패드 Slim3-15ITL 5D</c.ItemInfo>
                         <c.ItemCost><span>매월</span>12,000원</c.ItemCost>
@@ -43,6 +43,18 @@ const ChatSide = ({position}) => {
                         <c.ItemImg></c.ItemImg>
                         <c.ItemInfo>레노버 아이디어패드 Slim3-15ITL 5D</c.ItemInfo>
                         <c.ItemCost><span>매월</span>12,000원</c.ItemCost>
+                    </c.ItemLi> */}
+                    <c.ItemLi>
+                        <c.ItemImg></c.ItemImg>
+                    </c.ItemLi>
+                    <c.ItemLi>
+                        <c.ItemImg></c.ItemImg>
+                    </c.ItemLi>
+                    <c.ItemLi>
+                        <c.ItemImg></c.ItemImg>
+                    </c.ItemLi>
+                    <c.ItemLi>
+                        <c.ItemImg></c.ItemImg>
                     </c.ItemLi>
                 </c.ItemUl>
             </c.ChatSideArea>

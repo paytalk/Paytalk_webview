@@ -15,6 +15,8 @@ const category = [
     {title : '기부' , img : '/img/Rectangle 2966.png'},
 ]
 
+const BaseURL = 'https://paytalk.github.io/Paytalk_webview';
+
 const StoreContainer = () => {
 
     const [title,setTitle] = useState('');
@@ -37,7 +39,7 @@ const StoreContainer = () => {
                             nav(`/store/Detail`)
                         }}>
                         <s.StoreCategoryImg>
-                            <img src={index.img} alt="카테고리 이미지" key={key} />
+                            <img src={`${BaseURL}`+ index.img} alt="카테고리 이미지" key={key} />
                         </s.StoreCategoryImg>
                         <s.StoreCategoryTitle key='title'>{index.title}</s.StoreCategoryTitle>
                         </s.StoreCategoryLi>

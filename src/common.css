@@ -1,0 +1,7 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
+@import url('https://webfontworld.github.io/pretendard/Pretendard.css');
+
+* {
+  font-family: 'Pretendard','Spoqa Han Sans Neo', 'Spoqa Han Sans JP', sans-serif;
+}

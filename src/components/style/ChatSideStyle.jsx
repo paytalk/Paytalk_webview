@@ -78,14 +78,25 @@ export const Top = styled.div`
 export const Icon = styled(HiChevronRight)`
     font-size: 4.3333vw;
     color: #BCBCBC;
+    margin: 2vh 3.3333vw 2vh 0;
 `
+// export const ItemLi = styled.li`
+//     width: 31.1111vw;
+//     height: 24.0000vh;
+// `
+// export const ItemImg = styled.div`
+//     width: 31.1111vw;
+//     height: 14.0000vh;
+//     border: 1px solid #ccc;
+//     border-radius: 16px;
+// `
 export const ItemLi = styled.li`
-    width: 31.1111vw;
+    width: 15.1111vw;
     height: 24.0000vh;
 `
 export const ItemImg = styled.div`
-    width: 31.1111vw;
-    height: 14.0000vh;
+    width: 15.1111vw;
+    height: 15.1111vw;
     border: 1px solid #ccc;
     border-radius: 16px;
 `

@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 import * as m from './style/MainContainerStyle'
 
+const BaseURL = 'https://paytalk.github.io/Paytalk_webview';
+
 const MainContainer = () => {
     const nav = useNavigate();
 
@@ -19,14 +21,13 @@ const MainContainer = () => {
                     <m.LeftBoxArea>
                         <p>20,000,000원</p>
                         <p>B - PAY 포인트</p>
-                        <img className="chip" src="/img/chip (1).png" alt="칩" />
-                        <img src="/img/imsi.png" alt="B포인트"/></m.LeftBoxArea>
+                        </m.LeftBoxArea>
                     <m.RightBoxArea>
                         <m.ContentBox onClick={()=>nav(`/subscribe`)}>
                             <p>거래상품 요약</p>
                         </m.ContentBox>
                         <m.ContentBox onClick={()=>nav(`/store`)}>
-                            <p>구독하러 가기</p>
+                            <p>소비 리포트</p>
                         </m.ContentBox>
                     </m.RightBoxArea>
                 </m.BoxArea>

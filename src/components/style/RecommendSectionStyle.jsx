@@ -14,7 +14,7 @@ export const StoreRecommendBox = styled.div`
     }
 `
 export const StoreRecommendItemBox = styled.div`
-    width: 100vw;
+    width: 95.6666vw;
     overflow: scroll;
 `
 export const StoreRecommendUl = styled.ul`
