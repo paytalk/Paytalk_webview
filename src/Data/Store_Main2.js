@@ -1,6 +1,6 @@
 export const Data2 = {
   "data": {
-    "market2_title": "한달에 나를 위한 구독",
+    "market2_title": "한달의 나를 위한 구독",
     "product": [ 
       {
         "image": "/img/Marketing_sub2/1.png",

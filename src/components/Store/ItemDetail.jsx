@@ -37,7 +37,7 @@ const ItemDetail = () =>{
                     </i.SubOptionUl>
                     <i.SubText>매월 1일마다 컴퓨터 상품을 받을 수 있어요</i.SubText>
                     <i.SubCost><p><span>매월</span>12,000원</p></i.SubCost>
-                <i.Btn bgColor='#5C63E5' onClick={()=>nav('/store/Pay')}><p>구톡하기</p></i.Btn>
+                <i.Btn bgColor='#5C63E5' onClick={()=>nav('/store/Pay')}><p>구독하기</p></i.Btn>
                 </i.SubScribeCycle>
         </i.ItemDetailWrap>
     )

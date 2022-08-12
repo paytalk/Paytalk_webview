@@ -26,7 +26,7 @@ const MainContainer = () => {
                         <m.ContentBox onClick={()=>nav(`/subscribe`)}>
                             <p>거래상품 요약</p>
                         </m.ContentBox>
-                        <m.ContentBox onClick={()=>nav(`/store`)}>
+                        <m.ContentBox onClick={()=>nav(`/report`)}>
                             <p>소비 리포트</p>
                         </m.ContentBox>
                     </m.RightBoxArea>

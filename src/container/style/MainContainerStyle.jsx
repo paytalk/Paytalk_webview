@@ -93,9 +93,11 @@ export const Banner = styled.div`
     box-shadow: 4px 4px 4px #ccc;
     background-color: #fff;
     background-image: url('https://paytalk.github.io/Paytalk_webview/img/Rectangle 2921.png');
+    background-size: cover;
     border: 1px solid #f3f3f3;
     border-radius: 14px;
     p{
+        color: #fff;
         font-family: 'Spoqa Han Sans Neo';
         font-weight: 700;
         padding-top: 2vh;

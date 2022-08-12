@@ -2,7 +2,7 @@ export const chat_room_list = {
   "data": [
     {
       "profile_img": "/img/SalesDetail/블루비즈.png",
-      "chat_name": "대산식자제마트",
+      "chat_name": "대산식자재마트",
       "new_msg": "8월 10일 요청사신 식자재 배송예정입니다.",
       "chat_date" : "8월9일",
       "chat_cnt": "5"

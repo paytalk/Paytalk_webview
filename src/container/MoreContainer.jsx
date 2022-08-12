@@ -32,16 +32,11 @@ const MoreContainer = () => {
                     <m.MoreLi onClick={()=>nav('/bankaccount')}>은행 계좌<m.Right color="#BCBCBC" size='5vw'></m.Right></m.MoreLi>
                 </m.MoreUl>
                 <m.Gubun></m.Gubun>
-                <m.MoreTitle >통계</m.MoreTitle>
-                <m.MoreUl>
-                    <m.MoreLi onClick={()=>nav('/report')}>소비분석<m.Right color="#BCBCBC" size='5vw'></m.Right></m.MoreLi>
-                </m.MoreUl>
-                <m.Gubun></m.Gubun>
                 <m.MoreTitle>상품관리</m.MoreTitle>
                 <m.MoreUl>
                     <m.MoreLi onClick={()=>nav('/like')}>찜<m.Right color="#BCBCBC" size='5vw'></m.Right></m.MoreLi>
-                    <m.MoreLi onClick={()=>nav('/subscribe')}>내 구톡<m.Right color="#BCBCBC" size='5vw'></m.Right></m.MoreLi>
-                    <m.MoreLi onClick={()=>nav('/subscribehistory')}>구톡했던 상품<m.Right color="#BCBCBC" size='5vw'></m.Right></m.MoreLi>
+                    <m.MoreLi onClick={()=>nav('/subscribe')}>내 구독<m.Right color="#BCBCBC" size='5vw'></m.Right></m.MoreLi>
+                    <m.MoreLi onClick={()=>nav('/subscribehistory')}>구독했던 상품<m.Right color="#BCBCBC" size='5vw'></m.Right></m.MoreLi>
                 </m.MoreUl>
                 <m.Gubun></m.Gubun>
                 <m.MoreTitle>서비스</m.MoreTitle>
