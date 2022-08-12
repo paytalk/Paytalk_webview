@@ -3,6 +3,8 @@ import ItemTop from "../../common/ItemTop";
 import { subscribedData } from "../../Data/more_subscribed";
 import * as s from "../style/SubscribeHistoryStyle"
 
+const BaseURL = 'https://paytalk.github.io/Paytalk_webview';
+
 const SubscribeHistory = () => {
     return(
         <s.Wrap>
@@ -15,7 +17,9 @@ const SubscribeHistory = () => {
                 <s.SubscribedUl>
                     {subscribedData.data[0].product_1.map((index)=>
                     <s.SubscribedLi>
-                        <s.SubscribedImg></s.SubscribedImg>
+                        <s.SubscribedImg>
+                        <img src={`${BaseURL}` + index.image} alt="이미지" />
+                        </s.SubscribedImg>
                         <s.SubscribedName>{index.name}</s.SubscribedName>
                         <s.SubscribedPrice>{index.price}</s.SubscribedPrice>
                     </s.SubscribedLi>
@@ -31,7 +35,9 @@ const SubscribeHistory = () => {
                 <s.SubscribedUl>
                     {subscribedData.data[1].product_2.map((index)=>
                     <s.SubscribedLi>
-                        <s.SubscribedImg></s.SubscribedImg>
+                        <s.SubscribedImg>
+                            <img src={`${BaseURL}` + index.image} alt="이미지" />
+                        </s.SubscribedImg>
                         <s.SubscribedName>{index.name}</s.SubscribedName>
                         <s.SubscribedPrice>{index.price}</s.SubscribedPrice>
                     </s.SubscribedLi>

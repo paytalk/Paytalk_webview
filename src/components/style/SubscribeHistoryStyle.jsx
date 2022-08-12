@@ -60,6 +60,10 @@ export const SubscribedImg = styled.div`
     border: 1px solid #ccc;
     background-color: #ccc;
     border-radius: 16px;
+    img{
+        width: 28.8889vw;
+        height: 28.8889vw;
+    }
 `
 export const SubscribedName = styled.div`
     width: 28.8889vw;
