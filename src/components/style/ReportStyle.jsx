@@ -64,12 +64,17 @@ export const SubTitle = styled.div`
 `
 export const SubscribeItem = styled.div`
     display: flex;
-    margin: 0 4.4444vw;
+    margin: 0 4.4444vw 1vh 4.4444vw;
 `
 export const Img = styled.div`
     width: 13.3333vw;
     height: 13.3333vw;
+    border-radius: 8px;
     margin-right: 4.4444vw;
+    img{
+        width: 13.3333vw;
+        height: 13.3333vw;
+    }
 `
 export const Name = styled.div`
     width: 42.4444vw;
