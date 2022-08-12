@@ -97,3 +97,36 @@ export const PayDay = styled.div`
     text-align: right;
     margin-right: 4.4444vw;
 `
+export const GraphImg = styled.div`
+    width: 100%;
+    padding: 0 4.4444vw;
+    img{
+        width: 100%;
+    }
+`
+export const Item = styled.div`
+    display: flex;
+    margin: 0 4.4444vw 1vh 4.4444vw;
+    &:last-child{
+        margin: 0 4.4444vw 5vh 4.4444vw;
+    }
+`
+
+export const Circle = styled.div`
+    width: 6.6667vw;
+    height: 6.6667vw;
+    margin-right: 4.4444vw;
+    border-radius: 50%;
+    background-color: ${(props)=>(props.bgColor)};
+`
+export const ItemName = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 35.5556vw;
+    p{
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4.4444vw;
+    }
+`

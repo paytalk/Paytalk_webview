@@ -58,7 +58,28 @@ const Report = () => {
                 <p>홍길동님은 자동차 항목에</p>
                 <p>관심이 많으시네요!</p>
             </r.Title>
-            <img src={`${BaseURL}`+'/img/Group 2138.png'} alt='이미지'/>
+            <r.SubTitle>
+                자동차 항목에 사용한 금액은 200,000원이에요
+            </r.SubTitle>
+            <r.GraphImg>
+                <img src={`${BaseURL}` + '/img/Group 2138.png'} alt="그래프"/>
+            </r.GraphImg>
+            <r.Item>
+                <r.Circle bgColor="#736DDD"></r.Circle>
+                <r.ItemName><p>자동차</p><p>40%</p></r.ItemName>
+            </r.Item>
+            <r.Item>
+                <r.Circle bgColor="#00003E"></r.Circle>
+                <r.ItemName><p>전자제품</p><p>20%</p></r.ItemName>
+            </r.Item>
+            <r.Item>
+                <r.Circle bgColor="#1433E5"></r.Circle>
+                <r.ItemName><p>생활용품</p><p>10%</p></r.ItemName>
+            </r.Item>
+            <r.Item>
+                <r.Circle bgColor="#BCBCBC"></r.Circle>
+                <r.ItemName><p>기타</p><p>10%</p></r.ItemName>
+            </r.Item>
         </r.Wrap>
     )
 }
