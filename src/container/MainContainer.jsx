@@ -25,9 +25,12 @@ const MainContainer = () => {
                     <m.RightBoxArea>
                         <m.ContentBox onClick={()=>nav(`/subscribe`)}>
                             <p>거래상품 요약</p>
+                            <img src={`${BaseURL}`+'/img/Group 19.png'} alt="이미지" />
                         </m.ContentBox>
                         <m.ContentBox onClick={()=>nav(`/report`)}>
+
                             <p>소비 리포트</p>
+                            <img src={`${BaseURL}`+'/img/bell (light).png'} alt="이미지" />
                         </m.ContentBox>
                     </m.RightBoxArea>
                 </m.BoxArea>

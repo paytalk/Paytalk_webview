@@ -30,8 +30,8 @@ export const BoxArea = styled.div`
     padding-left: 4.4444vw;
 `
 export const LeftBoxArea = styled.div`
-    width: 54%;
-    height: 39vh;
+    width: 44.4444vw;
+    height: 86.6667vw;
     background-color: #5D5FEE;
     
     box-shadow: 4px 4px 4px #ccc;
@@ -65,8 +65,8 @@ export const RightBoxArea = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 42%;
-    height: 40vh;
+    width: 44.4444vw;
+    height: 86.6667vw;
     padding-bottom:10px;
     padding-right: 4.4444vw;
 `
@@ -77,14 +77,19 @@ export const ContentBox = styled.div`
     box-shadow: 4px 4px 4px #ccc;
     background-color: #fff;
     border: 1px solid #f3f3f3;
+    padding: 2vh 4.444vw;
     p{
         font-family: 'Spoqa Han Sans Neo';
         font-weight: 700;
-        padding-top: 2vh;
-        padding-left: 3.444vw;
         font-size: 4vw;
+        margin-bottom: 8.6111vw;
     }
-
+    img{
+        position: relative;
+        bottom: 0;
+        left: 20.2223vw;
+        width: 47.98px;
+    }
 `
 export const Banner = styled.div`
     margin: 2vh 4.444vw 0 4.4444vw;
@@ -111,6 +116,7 @@ export const Flex = styled.div`
     justify-content: space-between;
     padding: 0 4.4444vw;
     ${ContentBox}{
+        display: flex;
         width: 48%;
         margin-top: 20px;
         margin-bottom: 10px;
