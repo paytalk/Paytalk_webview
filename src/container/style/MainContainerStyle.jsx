@@ -54,11 +54,9 @@ export const LeftBoxArea = styled.div`
     }
     img{
         position: relative;
-        width: 20%;
-        top: 23vh;
-        left: 50%;
-        background-color: rgba(255,255,255,0.5);
-        border-radius: 50%;
+        top: 35vw;
+        left: 20vw;
+        
     }
 `
 export const RightBoxArea = styled.div`
@@ -87,8 +85,7 @@ export const ContentBox = styled.div`
     img{
         position: relative;
         bottom: 0;
-        left: 20.2223vw;
-        width: 47.98px;
+        left: ${(props)=>(props.left)};
     }
 `
 export const Banner = styled.div`
@@ -116,7 +113,6 @@ export const Flex = styled.div`
     justify-content: space-between;
     padding: 0 4.4444vw;
     ${ContentBox}{
-        display: flex;
         width: 48%;
         margin-top: 20px;
         margin-bottom: 10px;
@@ -127,6 +123,13 @@ export const Flex = styled.div`
             padding-top: 2vh;
             padding-left: 3.444vw;
             font-size: 4vw;
+            margin-bottom: 0;
         }
+        img{
+        position: relative;
+        bottom: 0;
+        left: ${(props)=>(props.left)};
+        transform: translateY(-5vw);
+    }
     }
 `
