@@ -3,6 +3,10 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import RecommendSection from "../components/Store/RecommendSection";
 import * as s from "./style/StoreStyle";
+import { Data } from "../Data/Store_Main1";
+import { Data2 } from "../Data/Store_Main2";
+import StoreDetail from "../components/Store/StoreDetail";
+
 
 const category = [
     {title : '키즈' , img : '/img/Rectangle 2959.png'},
@@ -18,9 +22,8 @@ const category = [
 const BaseURL = 'https://paytalk.github.io/Paytalk_webview';
 
 const StoreContainer = () => {
-
-    const [title,setTitle] = useState('');
-
+    const [index,setIndex] = useState(0);
+    const [detail,setDetail] = useState(false);
     const nav = useNavigate();
 
     
@@ -35,8 +38,8 @@ const StoreContainer = () => {
                 <s.StoreCategoryUl>
                     {category.map((index,key)=>
                         <s.StoreCategoryLi onClick={()=>{
-                            setTitle(index.title)
-                            nav(`/store/Detail`)
+                            setIndex(key)
+                            nav(`/store/Detail/${index.title}`)
                         }}>
                         <s.StoreCategoryImg>
                             <img src={`${BaseURL}`+ index.img} alt="카테고리 이미지" key={key} />
@@ -48,19 +51,13 @@ const StoreContainer = () => {
             </s.StoreCategoryBox>
             <s.Gubun></s.Gubun>
             <RecommendSection
-            title='한달의 나를 위한 구독'
+            title={Data.data.market1_title}
+            data={Data.data.product}
             ></RecommendSection>
             <s.Gubun></s.Gubun>
             <RecommendSection
-            title='여름에 필수 구독'
-            ></RecommendSection>
-            <s.Gubun></s.Gubun>
-            <RecommendSection
-            title='여름에 필수 구독'
-            ></RecommendSection>
-            <s.Gubun></s.Gubun>
-            <RecommendSection
-            title='여름에 필수 구독'
+            title={Data2.data.market2_title}
+            data={Data2.data.product}
             ></RecommendSection>
             </s.StoreContainerArea>
         </s.StoreContainerWrap>

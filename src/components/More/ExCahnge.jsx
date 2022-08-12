@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ItemTop from "../../common/ItemTop";
 import * as e from "../style/ExChangeStyle";
+import { Account } from "../../Data/account_info";
 
 const ExChange = () => {
     const [modal , setModal] = useState(false);
@@ -17,8 +18,8 @@ const ExChange = () => {
             <e.Title>어느계좌로 돈을 받으시겠어요?</e.Title>
             <e.Bankaccount>
                 <e.BankAccountInfo>
-                    <p>기업은행 저축예금</p>
-                    <p>1002-936-216107</p>
+                    <p>{Account.data[0].account_name}</p>
+                    <p>{Account.data[0].account_no}</p>
                 </e.BankAccountInfo>
                 <e.Chip>기본계좌</e.Chip>
             </e.Bankaccount>
@@ -37,18 +38,12 @@ const ExChange = () => {
                 <e.SubScribeCycle up ={modal ? "0" : "-100%"}>
                     <e.SubOption>계좌선택</e.SubOption>
                     <e.SubOptionUl>
-                        <e.SubOptionLi check = {check === 0 ? "checked" : ""} onClick={()=>setCheck(0)}>
-                            <p>기업은행 저축예금</p>
-                            <p>1002-936-216107</p>
-                    </e.SubOptionLi>
-                    <e.SubOptionLi check = {check === 1 ? "checked" : ""} onClick={()=>setCheck(1)}>
-                            <p>기업은행 저축예금</p>
-                            <p>1002-936-216107</p>
-                    </e.SubOptionLi>
-                    <e.SubOptionLi check = {check === 2 ? "checked" : ""} onClick={()=>setCheck(2)}>
-                            <p>기업은행 저축예금</p>
-                            <p>1002-936-216107</p>
-                    </e.SubOptionLi>
+                        {Account.data.map((index,key)=>
+                        <e.SubOptionLi onClick={()=>setCheck(key)} check = {check === key ? "checked" : "" }>
+                            <p>{index.account_name}</p>
+                            <p>{index.account_no}</p>
+                        </e.SubOptionLi>
+                        )}
                     </e.SubOptionUl>
                 <e.Btn onClick={()=>setModal(false)}><p>확인</p></e.Btn>
                 </e.SubScribeCycle>

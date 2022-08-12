@@ -16,6 +16,7 @@ export const StoreRecommendBox = styled.div`
 export const StoreRecommendItemBox = styled.div`
     width: 95.6666vw;
     overflow: scroll;
+    
 `
 export const StoreRecommendUl = styled.ul`
     
@@ -40,8 +41,13 @@ export const StoreRecommendImg = styled.div`
     height: 28.8889vw;
     border: 1px solid #ccc;
     border-radius: 16px;
+    img{
+        width: 28.8889vw;
+        height: 28.8889vw;
+    }
 `
 export const StoreRecommendTitle = styled.h2`
+    height: 10.1111vw;
     font-family: 'Spoqa Han Sans Neo';
     font-style: normal;
     font-weight: 700;

@@ -4,7 +4,7 @@ import ItemTop from "../../common/ItemTop";
 const Report = () => {
     return(
         <>
-        <ItemTop />
+        <ItemTop title='소비분석'/>
         </>
     )
 }

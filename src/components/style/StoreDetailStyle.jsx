@@ -2,7 +2,13 @@ import styled from "styled-components";
 import { HiSearch } from "react-icons/hi";
 
 export const StoreDetailWrap = styled.div`
-    
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    overflow: hidden;
 `
 
 export const StoreTop = styled.div`
@@ -14,12 +20,24 @@ export const StoreDetailFlex = styled.div`
     display: flex;
     justify-content: space-between;
     height: 7.8824vh;
+    
 `
 export const StoreSelectBox = styled.div`
-    width: 44.4444vw;
+    width: auto;
     height: 5.0000vh;
     border: 1px solid #BCBCBC;
     border-radius: 8px;
+    line-height: 5.0000vh;
+    padding: 0vh 2.1111vw;
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.8889vw;
+    text-align: center;
+    color: #181818;
+    &:last-child{
+        margin-right: 4.4444vw;
+    }
 `
 
 export const StoreDetailTitle = styled.h1`

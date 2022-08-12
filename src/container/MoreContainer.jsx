@@ -40,7 +40,7 @@ const MoreContainer = () => {
                 <m.MoreTitle>상품관리</m.MoreTitle>
                 <m.MoreUl>
                     <m.MoreLi onClick={()=>nav('/like')}>찜<m.Right color="#BCBCBC" size='5vw'></m.Right></m.MoreLi>
-                    <m.MoreLi onClick={()=>nav('/mysubscribe')}>내 구톡<m.Right color="#BCBCBC" size='5vw'></m.Right></m.MoreLi>
+                    <m.MoreLi onClick={()=>nav('/subscribe')}>내 구톡<m.Right color="#BCBCBC" size='5vw'></m.Right></m.MoreLi>
                     <m.MoreLi onClick={()=>nav('/subscribehistory')}>구톡했던 상품<m.Right color="#BCBCBC" size='5vw'></m.Right></m.MoreLi>
                 </m.MoreUl>
                 <m.Gubun></m.Gubun>

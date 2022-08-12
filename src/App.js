@@ -19,16 +19,12 @@ import SubscribeHistory from './components/More/SubscribeHistory';
 import Credit from './components/More/Credit';
 import Report from './components/More/Report';
 import BankAccount from './components/More/BankAccount';
-import MySubscribe from './components/More/MySubscribe';
 import ExchangeComplete from './components/More/ExchangeComplete';
 import RemittanceComplete from './components/More/RemittanceComplete';
 
 
 
-function App() {
-
-
-
+function App({index}) {
   return (
     <Routes>
       <Route path='/' element ={<MainPage />} />
@@ -36,7 +32,7 @@ function App() {
       <Route path ='/subscribe/*' element={<GooTalkInfoPage />} />
       <Route path = '/store' element = {<StorePage />} />
       <Route path = '/store/Item' element = {<ItemDetailPage />} />
-      <Route path = '/store/Detail' element ={<StoreDetailPage />} />
+      <Route path = '/store/Detail/*' element ={<StoreDetailPage  index={index}/>} />
       <Route path = '/store/Pay' element = {<PayMentPage />} />
       <Route path = 'store/PayComplete' element = { <PayCompletePage />} />
       <Route path ='/chat' element= { <ChatPage />} />
@@ -52,7 +48,6 @@ function App() {
       <Route path = '/credit' element = {<Credit />} />
       <Route path = '/report' element = {<Report />} />
       <Route path = '/bankaccount' element = {<BankAccount />} />
-      <Route path = '/mysubscribe' element = {<MySubscribe />} />
     </Routes>
   );
 }

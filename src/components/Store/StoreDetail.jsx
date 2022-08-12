@@ -3,22 +3,24 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as s from "../style/StoreDetailStyle";
 
-const StoreDetail = ({title}) => {
+const array = ['키즈','시니어','보험','학원','생필품','반려동물','헬스케어','기부']
+
+const StoreDetail = ({index}) => {
     const [open,setOpen] = useState(false)
     const nav = useNavigate();
     return(
         <s.StoreDetailWrap>
             <s.StoreTop>
             <s.StoreDetailFlex>
-            <s.StoreDetailTitle className={open ? "none" : ""}><span onClick={()=>nav(-1)}>&lt;</span>{title}</s.StoreDetailTitle>
-            <s.SearchArea className={open ? "" : "none"}>
-                <input type='text' placeholder="키즈"/>
-            </s.SearchArea>
+            <s.StoreDetailTitle><span onClick={()=>nav(-1)}>&lt;</span>{array[index]}</s.StoreDetailTitle>
+            
             <s.SearchIcon className={open ? "absolute" : ""} onClick={()=>setOpen(!open)}></s.SearchIcon>
             </s.StoreDetailFlex>
             <s.StoreDetailFlex>
-                <s.StoreSelectBox></s.StoreSelectBox>
-                <s.StoreSelectBox></s.StoreSelectBox>
+                <s.StoreSelectBox>최신순</s.StoreSelectBox>
+                <s.StoreSelectBox>판매순</s.StoreSelectBox>
+                <s.StoreSelectBox>낮은가격 순</s.StoreSelectBox>
+                <s.StoreSelectBox>높은가격 순</s.StoreSelectBox>
             </s.StoreDetailFlex>
             </s.StoreTop>
             <s.ItemArea>

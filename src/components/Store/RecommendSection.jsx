@@ -1,32 +1,23 @@
 import React from "react";
 import * as r from "../style/RecommendSectionStyle";
+const BaseURL = 'https://paytalk.github.io/Paytalk_webview';
 
-const RecommendSection = ({title}) => {
+const RecommendSection = ({title,data}) => {
     return(
         <r.StoreRecommendBox>
         <p>{title}</p>
         <r.StoreRecommendItemBox>
         <r.StoreRecommendUl>
+            {data.map((index)=>
             <r.StoreRecommendLi>
-                <r.StoreRecommendImg></r.StoreRecommendImg>
-                <r.StoreRecommendTitle>음악은 못참는 나에게 음악 구독</r.StoreRecommendTitle>
-                <r.StoreRecommendCost><span>매월</span> 12,000원</r.StoreRecommendCost>
+            <r.StoreRecommendImg>
+                <img src={`${BaseURL}`+index.image} alt="이미지" />
+            </r.StoreRecommendImg>
+            <r.StoreRecommendTitle>{index.name}</r.StoreRecommendTitle>
+            <r.StoreRecommendCost>{index.price}</r.StoreRecommendCost>
             </r.StoreRecommendLi>
-            <r.StoreRecommendLi>
-                <r.StoreRecommendImg></r.StoreRecommendImg>
-                <r.StoreRecommendTitle>음악은 못참는 나에게 음악 구독</r.StoreRecommendTitle>
-                <r.StoreRecommendCost><span>매월</span> 12,000원</r.StoreRecommendCost>
-            </r.StoreRecommendLi>
-            <r.StoreRecommendLi>
-                <r.StoreRecommendImg></r.StoreRecommendImg>
-                <r.StoreRecommendTitle>음악은 못참는 나에게 음악 구독</r.StoreRecommendTitle>
-                <r.StoreRecommendCost><span>매월</span> 12,000원</r.StoreRecommendCost>
-            </r.StoreRecommendLi>
-            <r.StoreRecommendLi>
-                <r.StoreRecommendImg></r.StoreRecommendImg>
-                <r.StoreRecommendTitle>음악은 못참는 나에게 음악 구독</r.StoreRecommendTitle>
-                <r.StoreRecommendCost><span>매월</span> 12,000원</r.StoreRecommendCost>
-            </r.StoreRecommendLi>
+            )}
+            
         </r.StoreRecommendUl>
         </r.StoreRecommendItemBox>
         </r.StoreRecommendBox>

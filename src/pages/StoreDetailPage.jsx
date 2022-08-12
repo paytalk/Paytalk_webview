@@ -1,10 +1,10 @@
 import React from "react";
 import StoreDetail from "../components/Store/StoreDetail";
 
-const StoreDetailPage = () => {
+const StoreDetailPage = ({index}) => {
     return(
         <>
-            <StoreDetail title='키즈' />
+            <StoreDetail index = {index} />
         </>
     )
 }

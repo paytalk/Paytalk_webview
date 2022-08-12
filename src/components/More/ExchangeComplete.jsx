@@ -9,7 +9,7 @@ const ExchangeComplete = () => {
         <e.ExchangeCompleteWrap>
             <ItemTop />
             <e.Title>
-                <p>우리은행 계좌로</p>
+                <p>홍길동님 계좌로</p>
                 <p>환전이 완료되었습니다</p>
             </e.Title>
             <e.ExchangeInfoBox>

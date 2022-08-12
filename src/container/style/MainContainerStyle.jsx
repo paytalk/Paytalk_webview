@@ -31,7 +31,7 @@ export const BoxArea = styled.div`
 `
 export const LeftBoxArea = styled.div`
     width: 54%;
-    height: 40vh;
+    height: 39vh;
     background-color: #5D5FEE;
     
     box-shadow: 4px 4px 4px #ccc;
@@ -51,16 +51,6 @@ export const LeftBoxArea = styled.div`
         padding-left: 4.444vw;
         font-size: 4vw;
         color: #fff;
-    }
-    img.chip{
-        position: relative;
-        width: 24%;
-        top: 17vh;
-        left: 37%;
-        background-color: rgba(255,255,255,0);
-        border-radius: 0%;
-        transform: rotate(90deg);
-        opacity: 0;
     }
     img{
         position: relative;
