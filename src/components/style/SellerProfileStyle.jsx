@@ -31,7 +31,11 @@ export const SellerProfile = styled.div`
     width: 15.5556vw;
     height: 15.5556vw;
     border-radius: 16px;
-    background:#D9D9D9;
+    
+    img{
+        width: 15.5556vw;
+        object-fit: fill;
+    }
 `
 export const SellerName = styled.div`
     margin-left: 4.4444vw;
@@ -78,7 +82,6 @@ export const SellerTab = styled.div`
 `
 export const SellerTabUl = styled.ul`
     display: flex;
-    
     border-top: 1px solid #EEEEEE ;
     border-bottom: 1px solid #EEEEEE ;
 `
@@ -257,6 +260,10 @@ export const ReviewImg = styled.div`
     border: 1px solid #ccc;
     background-color: #ccc;
     border-radius: 8px;
+    img{
+        width: 91.1111vw;
+        height: 53.3333vw;
+    }
 `
 
 export const ReviewTitle = styled.div`

@@ -25,7 +25,7 @@ const StoreContainer = () => {
     const [index,setIndex] = useState(0);
     const [detail,setDetail] = useState(false);
     const nav = useNavigate();
-
+    
     
 
     return(

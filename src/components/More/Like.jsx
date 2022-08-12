@@ -2,6 +2,7 @@ import React from "react";
 import ItemTop from "../../common/ItemTop";
 import * as l from "../style/LikeStyle"
 import { LikeData } from "../../Data/more_liked";
+const BaseURL = 'https://paytalk.github.io/Paytalk_webview';
 
 const Like = () => {
     return(
@@ -10,7 +11,9 @@ const Like = () => {
             <l.LikeUl>
             {LikeData.data.map((index)=>
             <l.Likeli>
-                <l.LikeImg></l.LikeImg>
+                <l.LikeImg>
+                    <img src={`${BaseURL}` + index.image} alt="이미지" />
+                </l.LikeImg>
                 <l.LikeInfo>
                     <l.LikeTitle>{index.name}</l.LikeTitle>
                     <l.LikePrice>{index.price}</l.LikePrice>

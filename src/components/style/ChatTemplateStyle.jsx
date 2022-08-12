@@ -4,7 +4,8 @@ import { BiMenu } from "react-icons/bi";
 import {HiChevronDown} from "react-icons/hi"
 
 export const ChatTemplateWrap = styled.div`
-    position: relative;
+    position: absolute;
+    top: 0;
     width: 100%;
     height: 100vh;
     z-index: 2;
@@ -163,12 +164,15 @@ export const ChatProfile = styled.div`
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #F8F8F8;
-    
+    img{
+        width: 8.8889vw;
+        height: 8.8889vw;
+    }
 `
 export const Chat = styled.div`
     position: absolute;
     width: 56.6667vw;
-    height: 31.1111vw;
+    height: auto;
     background-color: #F8F8F8;
     border-radius: 16px;
     transform: translate(8.8889vw,-0.7vh);
@@ -177,8 +181,8 @@ export const Chat = styled.div`
     font-weight: 400;
     font-size: 3.8889vw;
     line-height: 140%;
-    padding-top: 1vh;
-    padding-left: 2.2222vw;
+    padding: 1vh 2.2222vw;
+    word-break: keep-all;
 
     color: #181818;
 `

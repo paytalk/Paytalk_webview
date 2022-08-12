@@ -42,10 +42,13 @@ export const ChatListLi = styled.li`
 `
 
 export const ChatProfile = styled.div`
-    width: 50px;
-    height: 50px;
-    background-color: #ccc;
+    width: 13.8889vw;
+    height: 13.8889vw;
     border-radius: 17px;
+    img{
+        width: 13.8889vw;
+    height: 13.8889vw;
+    }
 `
 export const ChatInfo = styled.div`
     

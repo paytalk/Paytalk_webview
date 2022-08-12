@@ -19,9 +19,12 @@ export const LikeImg = styled.div`
     width: 22.2222vw;
     height: 22.2222vw;
     border: 1px solid #ccc;
-    background-color: #ccc;
     margin-right: 4.4444vw;
     border-radius: 16px;
+    img{
+        width: 22.2222vw;
+    height: 22.2222vw;
+    }
 `
 export const LikeInfo = styled.div`
     

@@ -3,9 +3,11 @@ import { useNavigate } from "react-router-dom";
 import * as c from '../style/ChatTemplateStyle';
 import SellerProfile from "./ SellerProfile";
 import ChatSide from "./ChatSide";
+import { Chat_Trans } from "../../Data/chat_transaction_info";
 
+const BaseURL = 'https://paytalk.github.io/Paytalk_webview';
 
-const ChatTemplate = () => {
+const ChatTemplate = ({setChatDetail,ChatName,chat}) => {
     const nav = useNavigate();
     const [side,setSide] = useState(false);
     const [modal,setModal] = useState(false);
@@ -15,14 +17,15 @@ const ChatTemplate = () => {
         <c.ChatTemplateWrap>
             <c.ChatTemplateArea>
                 <c.Top>
-                    <c.BackBtn onClick={()=>nav(-1)}></c.BackBtn>
-                    <c.Name>넷플릭스</c.Name>
+                    <c.BackBtn onClick={()=>
+                        setChatDetail(false)}></c.BackBtn>
+                    <c.Name>{ChatName}</c.Name>
                     <c.MenuBtn onClick={()=>{
                         setSide(!side)
                         setHistory(false)
                         }}></c.MenuBtn>
                 </c.Top>
-                <c.History overflow = {history ? "hidden" : "scroll"} height ={history ? "87.5vh" : "5vh"}>
+                <c.History overflow = {history ? "scroll" : "hidden"} height ={history ? "87.5vh" : "5vh"}>
                     <p onClick={()=> {
                         setHistory(!history)
                         setOpen(-1)
@@ -32,66 +35,23 @@ const ChatTemplate = () => {
                         2022년 7월
                     </c.HistoryDetail>
                     <c.HistoryItemUl>
-                        <c.HistoryItemLi onClick={()=>setOpen(1)} height={open == 1 ? "31.0000vh" : "10vh"}>
-                            <c.ItemTitle>
-                                <p>다이슨 청소기 (2년)</p>
-                                <c.ItemThe></c.ItemThe>
-                            </c.ItemTitle>
-                            <c.cost>400,000원</c.cost>
-                            <c.ItemDetail>
-                                <p><span>상품명</span>다이슨 청소기</p>
-                                <p><span>결제일</span>2021.07.21 (매월21일)</p>
-                                <p><span>결제금액</span>400,000원</p>
-                                <p><span>결제정보</span>신한카드 / 1234-****-****-1234</p>
-                                <p><span>결제기간</span>2021.07.21~</p>
-                                <p><span>구독상태</span>구독중(7개월)</p>
-                            </c.ItemDetail>
-                        </c.HistoryItemLi>
-                        <c.HistoryItemLi onClick={()=>setOpen(2)} height={open == 2 ? "31.0000vh" : "10vh"}>
-                            <c.ItemTitle>
-                                <p>다이슨 청소기 (2년)</p>
-                                <c.ItemThe></c.ItemThe>
-                            </c.ItemTitle>
-                            <c.cost>400,000원</c.cost>
-                            <c.ItemDetail>
-                                <p><span>상품명</span>다이슨 청소기</p>
-                                <p><span>결제일</span>2021.07.21 (매월21일)</p>
-                                <p><span>결제금액</span>400,000원</p>
-                                <p><span>결제정보</span>신한카드 / 1234-****-****-1234</p>
-                                <p><span>결제기간</span>2021.07.21~</p>
-                                <p><span>구독상태</span>구독중(7개월)</p>
-                            </c.ItemDetail>
-                        </c.HistoryItemLi>
-                        <c.HistoryItemLi onClick={()=>setOpen(3)} height={open == 3 ? "31.0000vh" : "10vh"}>
-                            <c.ItemTitle>
-                                <p>다이슨 청소기 (2년)</p>
-                                <c.ItemThe></c.ItemThe>
-                            </c.ItemTitle>
-                            <c.cost>400,000원</c.cost>
-                            <c.ItemDetail>
-                                <p><span>상품명</span>다이슨 청소기</p>
-                                <p><span>결제일</span>2021.07.21 (매월21일)</p>
-                                <p><span>결제금액</span>400,000원</p>
-                                <p><span>결제정보</span>신한카드 / 1234-****-****-1234</p>
-                                <p><span>결제기간</span>2021.07.21~</p>
-                                <p><span>구독상태</span>구독중(7개월)</p>
-                            </c.ItemDetail>
-                        </c.HistoryItemLi>
-                        <c.HistoryItemLi onClick={()=>setOpen(4)} height={open == 4 ? "31.0000vh" : "10vh"}>
-                            <c.ItemTitle>
-                                <p>다이슨 청소기 (2년)</p>
-                                <c.ItemThe></c.ItemThe>
-                            </c.ItemTitle>
-                            <c.cost>400,000원</c.cost>
-                            <c.ItemDetail>
-                                <p><span>상품명</span>다이슨 청소기</p>
-                                <p><span>결제일</span>2021.07.21 (매월21일)</p>
-                                <p><span>결제금액</span>400,000원</p>
-                                <p><span>결제정보</span>신한카드 / 1234-****-****-1234</p>
-                                <p><span>결제기간</span>2021.07.21~</p>
-                                <p><span>구독상태</span>구독중(7개월)</p>
-                            </c.ItemDetail>
-                        </c.HistoryItemLi>
+                        {Chat_Trans.data.map((index,key)=>
+                        <c.HistoryItemLi onClick={ open == key ? ()=>setOpen(-1) : ()=>setOpen(key)} height={open == key ? "68.8889vw" : "10vh"}>
+                        <c.ItemTitle>
+                            <p>{index.name}</p>
+                            <c.ItemThe></c.ItemThe>
+                        </c.ItemTitle>
+                        <c.cost>{index.price}</c.cost>
+                        <c.ItemDetail>
+                            <p><span>상품명</span>{index.name}</p>
+                            <p><span>결제일</span>{index.transaction_detail.date}</p>
+                            <p><span>결제금액</span>{index.transaction_detail.price}</p>
+                            <p><span>결제정보</span>{index.transaction_detail.info_company} / {index.transaction_detail.info_card_no}</p>
+                            <p><span>결제기간</span>{index.transaction_detail.Subscription_date}</p>
+                            <p><span>구독상태</span>{index.transaction_detail.status}(7개월)</p>
+                        </c.ItemDetail>
+                    </c.HistoryItemLi>
+                        )}
                     </c.HistoryItemUl>
                 </c.History>
                 <c.ChatArea>
@@ -99,9 +59,11 @@ const ChatTemplate = () => {
                             <c.ChatProfile onClick={()=>{
                                 setModal(true)
                                 setSide(false)
-                                }}></c.ChatProfile>
-                            <c.ChatName>넷플릭스</c.ChatName>
-                            <c.Chat>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum id id in turpis. Volutpat in lacus senectus a mauris libero dictum nulla.</c.Chat>
+                                }}>
+                                    <img src={`${BaseURL}`+'/img/SalesDetail/블루비즈.png'} alt=""/>
+                                </c.ChatProfile>
+                            <c.ChatName>{ChatName}</c.ChatName>
+                            <c.Chat>{chat}</c.Chat>
                         </c.ChatSample>
                 </c.ChatArea>
                 <c.ChatInputArea></c.ChatInputArea>

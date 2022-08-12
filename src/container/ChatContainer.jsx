@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as c from "./style/ChatContainerStyle"
-
+import { chat_room_list } from "../Data/chat_room_list";
+import ChatTemplate from "../components/chat/ChatTemplate";
+const BaseURL = 'https://paytalk.github.io/Paytalk_webview';
 const ChatContainer = () =>{
 
+    const [chatDetail , setChatDetail] = useState(false);
+    const [chatNum , setChatNum] = useState(-1);
     const nav = useNavigate();
 
     return(
@@ -12,42 +16,25 @@ const ChatContainer = () =>{
                 <c.ChatContainerTitle><h1>채팅</h1></c.ChatContainerTitle>
                 <c.ChatListArea>
                     <c.ChatListUl>
-                        <c.ChatListLi onClick={()=>nav(`/chat/1`)}>
-                            <c.ChatProfile></c.ChatProfile>
-                            <c.ChatInfo>
-                            <c.ChatName>넷플릭스</c.ChatName>
-                            <c.ChatMem>9</c.ChatMem>
-                            <c.ChatPrev>결제가 완료되었습니다</c.ChatPrev>
-                            </c.ChatInfo>
-                        </c.ChatListLi>
-                        <c.ChatListLi>
-                            <c.ChatProfile></c.ChatProfile>
-                            <c.ChatInfo>
-                            <c.ChatName>넷플릭스</c.ChatName>
-                            <c.ChatPrev>결제가 완료되었습니다</c.ChatPrev>
-                            </c.ChatInfo>
-                        </c.ChatListLi><c.ChatListLi>
-                            <c.ChatProfile></c.ChatProfile>
-                            <c.ChatInfo>
-                            <c.ChatName>넷플릭스</c.ChatName>
-                            <c.ChatPrev>결제가 완료되었습니다</c.ChatPrev>
-                            </c.ChatInfo>
-                        </c.ChatListLi><c.ChatListLi>
-                            <c.ChatProfile></c.ChatProfile>
-                            <c.ChatInfo>
-                            <c.ChatName>넷플릭스</c.ChatName>
-                            <c.ChatPrev>결제가 완료되었습니다</c.ChatPrev>
-                            </c.ChatInfo>
-                        </c.ChatListLi><c.ChatListLi>
-                            <c.ChatProfile></c.ChatProfile>
-                            <c.ChatInfo>
-                            <c.ChatName>넷플릭스</c.ChatName>
-                            <c.ChatPrev>결제가 완료되었습니다</c.ChatPrev>
-                            </c.ChatInfo>
-                        </c.ChatListLi>
+                        {chat_room_list.data.map((index,key)=>
+                        <c.ChatListLi onClick={()=>{
+                            setChatDetail(true)
+                            setChatNum(key)
+                            }}>
+                        <c.ChatProfile>
+                            <img src={`${BaseURL}`+'/img/SalesDetail/블루비즈.png'} alt="프로필" />
+                        </c.ChatProfile>
+                        <c.ChatInfo>
+                        <c.ChatName>{index.chat_name}</c.ChatName>
+                        <c.ChatMem></c.ChatMem>
+                        <c.ChatPrev>{index.new_msg}</c.ChatPrev>
+                        </c.ChatInfo>
+                    </c.ChatListLi>
+                        )}
                     </c.ChatListUl>
                 </c.ChatListArea>
             </c.ChatContainerArea>
+            {chatDetail ? <ChatTemplate setChatDetail={setChatDetail} ChatName={chat_room_list.data[chatNum].chat_name} chat = {chat_room_list.data[chatNum].new_msg}/> : ""}
         </c.ChatContainerWrap>
     )
 }

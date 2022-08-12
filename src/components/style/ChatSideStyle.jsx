@@ -36,6 +36,13 @@ export const MediaBox = styled.div`
     border-radius: 8px;
     margin-left: 3.3333vw;
     margin-bottom: 1vh;
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.8889vw;
+    line-height: 6vh;
+    text-align: center;
+color: #666666;
     &:nth-child(3){
         margin-bottom: 2vh;
     }
@@ -51,6 +58,7 @@ export const Info = styled.div`
         font-style: normal;
         font-weight: 400;
         font-size: 3.0556vw;
+        transform: translateY(0.4vh);
     }
     p{
         margin-bottom: 1vh;
@@ -99,6 +107,10 @@ export const ItemImg = styled.div`
     height: 15.1111vw;
     border: 1px solid #ccc;
     border-radius: 16px;
+    img{
+        width: 15.1111vw;
+        height: 15.1111vw;
+    }
 `
 export const ItemInfo = styled.div`
     font-family: 'Pretendard';

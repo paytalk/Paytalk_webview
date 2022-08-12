@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import * as s from "../style/SellerProfileStyle";
+import { Store_head } from "../../Data/store_header";
+import { Store_info } from "../../Data/store_info";
+import { Store_noti } from "../../Data/store_notification";
+import { Store_review } from "../../Data/store_review";
+import { Chat_drawer_Data } from "../../Data/chat_\bdrawer_info";
+
+const BaseURL = 'https://paytalk.github.io/Paytalk_webview';
 
 const SellerProfile = ({position,OnClick}) =>{
     const [pin,setPin] = useState(0);
@@ -10,10 +17,12 @@ const SellerProfile = ({position,OnClick}) =>{
         <s.SellerProfileWrap   position ={position}>
             <s.BackIcon onClick={click}></s.BackIcon>
             <s.SellerProfileTop>
-                <s.SellerProfile></s.SellerProfile>
+                <s.SellerProfile>
+                    <img src={Store_head.data.profile_img} alt="이미지" />
+                </s.SellerProfile>
                 <s.SellerName>
-                    <p>넷플릭스</p>
-                    <p>리뷰 999+</p>
+                    <p>{Store_head.data.name}</p>
+                    <p>리뷰 {Store_head.data.review_cnt}</p>
                 </s.SellerName>
                 <s.Btn width = "8.8889vw" height = "8.8889vw"></s.Btn>
                 <s.Btn width = "22.2222vw" height = "8.8889vw">문의하기</s.Btn>
@@ -64,62 +73,50 @@ const SellerProfile = ({position,OnClick}) =>{
                         <s.ContentCost><span>매월</span>12,000원</s.ContentCost>
                     </s.ContentBoxLi>
                 </s.ContentBoxUl> : pin == 1 ? <s.ContentBoxUl>
-                    <s.NoticeLi><h3>상품 임시 품절안내</h3><p>22.07.01</p></s.NoticeLi>
-                    <s.NoticeLi><h3>상품 임시 품절안내</h3><p>22.07.01</p></s.NoticeLi>
-                    <s.NoticeLi><h3>상품 임시 품절안내</h3><p>22.07.01</p></s.NoticeLi>
-                    <s.NoticeLi><h3>상품 임시 품절안내</h3><p>22.07.01</p></s.NoticeLi>
-                    <s.NoticeLi><h3>상품 임시 품절안내</h3><p>22.07.01</p></s.NoticeLi>
-                    <s.NoticeLi><h3>상품 임시 품절안내</h3><p>22.07.01</p></s.NoticeLi>
+                    {Store_noti.data.map((index)=>
+                    <s.NoticeLi><h3>{index.review_title}</h3><p>{index.review_lastModified}</p></s.NoticeLi>
+                    )}
                 </s.ContentBoxUl> : pin == 2 ? <s.InfoBox>
                     <s.InfoTitle>기본정보</s.InfoTitle>
                     <s.BasicInfo>
-                        <p><span>영업시간</span>10:00 ~ 22:00</p>
-                        <p><span>웹사이트</span>https://www.naver.com</p>
-                        <p><span>전화번호</span>010-1234-1234</p>
+                        <p><span>영업시간</span>{Store_info.data.base_info.running_time}</p>
+                        <p><span>웹사이트</span>{Store_info.data.base_info.store_url}</p>
+                        <p><span>전화번호</span>{Store_info.data.base_info.phone_num}</p>
                     </s.BasicInfo>
                 <s.Gubun></s.Gubun>
                     <s.InfoTitle>소셜 계정</s.InfoTitle>
                     <s.SnsLink>
                         <s.Sns>
                             <s.SnsImg></s.SnsImg>
-                            <s.SnsText>@blue_lakers</s.SnsText>
+                            <s.SnsText>{Store_info.data.social_sns.instagram_id}</s.SnsText>
                         </s.Sns>
                         <s.Sns>
                             <s.SnsImg></s.SnsImg>
-                            <s.SnsText>블루레이커스 홍보 블로그</s.SnsText>
-                        </s.Sns>
-                        <s.Sns>
-                            <s.SnsImg></s.SnsImg>
-                            <s.SnsText>https://www.naver.com</s.SnsText>
+                            <s.SnsText>{Store_info.data.social_sns.urls.url}</s.SnsText>
                         </s.Sns>
                     </s.SnsLink>
                 <s.Gubun></s.Gubun>
                 <s.InfoTitle>사업자 등록정보</s.InfoTitle>
                 <s.CompanyInfo>
-                    <p><span>법인명</span>NetFlix</p>
-                    <p><span>사업자 등록번호</span>123456-123456</p>
-                    <p><span>업태</span>소매/도매</p>
-                    <p><span>주소</span>서울특별시 서초구 매헌로 24길</p>
+                    <p><span>법인명</span>{Store_info.data.seller_info.corporate_name}</p>
+                    <p><span>사업자 등록번호</span>{Store_info.data.seller_info.seller_num}</p>
+                    <p><span>업태</span>{Store_info.data.seller_info.business_status}</p>
+                    <p><span>주소</span>{Store_info.data.seller_info.address}</p>
                 </s.CompanyInfo>
                 </s.InfoBox> : <s.ContentBoxUl>
-                    <s.ReviewLi>
-                        <s.ReviewImg></s.ReviewImg>
-                        <s.ReviewerNick><p><span>ygh****</span>2022.08.01</p></s.ReviewerNick>
-                        <s.ReviewTitle>맥북너무좋아요</s.ReviewTitle>
-                        <s.ReviewText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum est elementum massa, quis quis a sed elit condimentum.</s.ReviewText>
+                    {
+                        Store_review.data.map((index)=>
+                        <s.ReviewLi>
+                        <s.ReviewImg>
+                            <img src={`${BaseURL}`+index.review_img} alt="이미지"/>
+                        </s.ReviewImg>
+                        <s.ReviewerNick><p><span>{index.review_userId}</span>{index.review_lastModified}</p></s.ReviewerNick>
+                        <s.ReviewTitle>{index.review_title}</s.ReviewTitle>
+                        <s.ReviewText>{index.review_description}</s.ReviewText>
                     </s.ReviewLi>
-                    <s.ReviewLi>
-                        <s.ReviewImg></s.ReviewImg>
-                        <s.ReviewerNick><p><span>ygh****</span>2022.08.01</p></s.ReviewerNick>
-                        <s.ReviewTitle>맥북너무좋아요</s.ReviewTitle>
-                        <s.ReviewText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum est elementum massa, quis quis a sed elit condimentum.</s.ReviewText>
-                    </s.ReviewLi>
-                    <s.ReviewLi>
-                        <s.ReviewImg></s.ReviewImg>
-                        <s.ReviewerNick><p><span>ygh****</span>2022.08.01</p></s.ReviewerNick>
-                        <s.ReviewTitle>맥북너무좋아요</s.ReviewTitle>
-                        <s.ReviewText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum est elementum massa, quis quis a sed elit condimentum.</s.ReviewText>
-                    </s.ReviewLi>
+                        )
+                    }
+                    
                 </s.ContentBoxUl>}
                 
                 

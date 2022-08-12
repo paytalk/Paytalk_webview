@@ -98,10 +98,24 @@ export const PayDay = styled.div`
     margin-right: 4.4444vw;
 `
 export const GraphImg = styled.div`
+    
     width: 100%;
     padding: 0 4.4444vw;
+    
     img{
-        width: 100%;
+        display: table;
+        width: 80.5556vw;
+        height: 80.5556vw;
+        margin: 0 auto;
+    }
+    div{
+        position: absolute;
+        left: 50%;
+        width: 40vw;
+        height: 40vw;
+        background-color: #fff;
+        transform: translate(-50%,-60vw);
+        border-radius: 50%;
     }
 `
 export const Item = styled.div`
