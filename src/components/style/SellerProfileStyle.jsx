@@ -120,9 +120,14 @@ export const ContentImg = styled.div`
     height: 44.4444vw;
     border: 1px solid #ccc;
     border-radius: 16px;
+    img{
+        width: 44.4444vw;
+        height: 44.4444vw;
+    }
 `
 
 export const ContentTitle = styled.div`
+    height: 11.1111vw;
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 700;
@@ -135,7 +140,7 @@ export const ContentCost = styled.div`
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 700;
-    font-size: 5.0000vw;
+    font-size: 4.0000vw;
     color: #181818;
     margin-bottom: 2vh;
     span{

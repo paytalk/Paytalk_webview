@@ -4,7 +4,7 @@ import { Store_head } from "../../Data/store_header";
 import { Store_info } from "../../Data/store_info";
 import { Store_noti } from "../../Data/store_notification";
 import { Store_review } from "../../Data/store_review";
-import { Chat_drawer_Data } from "../../Data/chat_\bdrawer_info";
+import { Store_Mat } from "../../Data/store_foodmaterials_goods";
 
 const BaseURL = 'https://paytalk.github.io/Paytalk_webview';
 
@@ -24,7 +24,9 @@ const SellerProfile = ({position,OnClick}) =>{
                     <p>{Store_head.data.name}</p>
                     <p>리뷰 {Store_head.data.review_cnt}</p>
                 </s.SellerName>
-                <s.Btn width = "8.8889vw" height = "8.8889vw"></s.Btn>
+                <s.Btn width = "8.8889vw" height = "8.8889vw">
+                    <img style={{width : "8.8889vw",height: "8.8889vw"}} src={`${BaseURL}`+'public/img/link (1).png'} alt="이미지" />
+                </s.Btn>
                 <s.Btn width = "22.2222vw" height = "8.8889vw">문의하기</s.Btn>
             </s.SellerProfileTop>
             <s.SellerTab>
@@ -37,41 +39,15 @@ const SellerProfile = ({position,OnClick}) =>{
             </s.SellerTab>
             <s.ContentBox>
                 {pin == 0 ? <s.ContentBoxUl>
+                    {Store_Mat.data.product.map((index)=>
                     <s.ContentBoxLi>
-                        <s.ContentImg></s.ContentImg>
-                        <s.ContentTitle>레노버 아이디어패드 Slim3-15ITL 5D WIN10</s.ContentTitle>
-                        <s.ContentCost><span>매월</span>12,000원</s.ContentCost>
-                    </s.ContentBoxLi>
-                    <s.ContentBoxLi>
-                        <s.ContentImg></s.ContentImg>
-                        <s.ContentTitle>레노버 아이디어패드 Slim3-15ITL 5D WIN10</s.ContentTitle>
-                        <s.ContentCost><span>매월</span>12,000원</s.ContentCost>
-                    </s.ContentBoxLi>
-                    <s.ContentBoxLi>
-                        <s.ContentImg></s.ContentImg>
-                        <s.ContentTitle>레노버 아이디어패드 Slim3-15ITL 5D WIN10</s.ContentTitle>
-                        <s.ContentCost><span>매월</span>12,000원</s.ContentCost>
-                    </s.ContentBoxLi>
-                    <s.ContentBoxLi>
-                        <s.ContentImg></s.ContentImg>
-                        <s.ContentTitle>레노버 아이디어패드 Slim3-15ITL 5D WIN10</s.ContentTitle>
-                        <s.ContentCost><span>매월</span>12,000원</s.ContentCost>
-                    </s.ContentBoxLi>
-                    <s.ContentBoxLi>
-                        <s.ContentImg></s.ContentImg>
-                        <s.ContentTitle>레노버 아이디어패드 Slim3-15ITL 5D WIN10</s.ContentTitle>
-                        <s.ContentCost><span>매월</span>12,000원</s.ContentCost>
-                    </s.ContentBoxLi>
-                    <s.ContentBoxLi>
-                        <s.ContentImg></s.ContentImg>
-                        <s.ContentTitle>레노버 아이디어패드 Slim3-15ITL 5D WIN10</s.ContentTitle>
-                        <s.ContentCost><span>매월</span>12,000원</s.ContentCost>
-                    </s.ContentBoxLi>
-                    <s.ContentBoxLi>
-                        <s.ContentImg></s.ContentImg>
-                        <s.ContentTitle>레노버 아이디어패드 Slim3-15ITL 5D WIN10</s.ContentTitle>
-                        <s.ContentCost><span>매월</span>12,000원</s.ContentCost>
-                    </s.ContentBoxLi>
+                    <s.ContentImg>
+                        <img src={`${BaseURL}`+index.image} alt="이미지" />
+                    </s.ContentImg>
+                    <s.ContentTitle>{index.name}</s.ContentTitle>
+                    <s.ContentCost>{index.price}</s.ContentCost>
+                </s.ContentBoxLi>
+                    )}
                 </s.ContentBoxUl> : pin == 1 ? <s.ContentBoxUl>
                     {Store_noti.data.map((index)=>
                     <s.NoticeLi><h3>{index.review_title}</h3><p>{index.review_lastModified}</p></s.NoticeLi>

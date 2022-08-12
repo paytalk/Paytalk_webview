@@ -136,9 +136,26 @@ export const ChatArea = styled.div`
     background-color: #cfd8dc;
 `
 export const ChatInputArea = styled.div`
+    display: flex;
     width: 100%;
     height: 6.25vh;
     background-color: #ccc;
+`
+export const ChatInputBox = styled.input`
+    padding-left:4.444vw;
+    width: 87%;
+    outline: none;
+    border: none;
+    height: 6.25vh;
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.8889vw;
+`
+export const ChatSend = styled.div`
+    width: 13%;
+    height: 100%;
+    background-color: #5C63E5;
 `
 
 export const ChatSample = styled.div`

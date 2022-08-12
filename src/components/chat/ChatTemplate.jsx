@@ -66,7 +66,10 @@ const ChatTemplate = ({setChatDetail,ChatName,chat}) => {
                             <c.Chat>{chat}</c.Chat>
                         </c.ChatSample>
                 </c.ChatArea>
-                <c.ChatInputArea></c.ChatInputArea>
+                <c.ChatInputArea>
+                    <c.ChatInputBox></c.ChatInputBox>
+                    <c.ChatSend></c.ChatSend>
+                </c.ChatInputArea>
             </c.ChatTemplateArea>
             {side ? <ChatSide position='0'/> : <ChatSide position='-100%'/>}
             {modal ? <SellerProfile OnClick={()=>{
