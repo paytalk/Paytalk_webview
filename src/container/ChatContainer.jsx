@@ -22,7 +22,7 @@ const ChatContainer = () =>{
                             setChatNum(key)
                             }}>
                         <c.ChatProfile>
-                            <img src={`${BaseURL}`+'/img/SalesDetail/블루비즈.png'} alt="프로필" />
+                            <img src={`${BaseURL}`+index.profile_img} alt="프로필" />
                         </c.ChatProfile>
                         <c.ChatInfo>
                         <c.ChatName>{index.chat_name}</c.ChatName>

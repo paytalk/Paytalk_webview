@@ -117,7 +117,7 @@ export const ImgArea = styled.div`
     border-radius: 16px;
     img{
         width: 100%;
-        height: 44.4444vw;
+        height: 44.444vw;
     }
 `
 export const TextArea = styled.div`
