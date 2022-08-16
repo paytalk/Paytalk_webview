@@ -4,7 +4,7 @@ import { HiSearch } from "react-icons/hi";
 export const StoreDetailWrap = styled.div`
     position: absolute;
     top: 0;
-    z-index: 3;
+    z-index: 4;
     width: 100%;
     height: 100vh;
     background-color: #fff;
@@ -106,17 +106,22 @@ export const ItemUl = styled.ul`
 
 export const ItemLi = styled.li`
     width: 44.4444vw;
-    height: 32.0000vh;
+    height: 71.1111vw;
     
 `
 
 export const ImgArea = styled.div`
     width: 100%;
-    height: 20.0000vh;
+    height: 44.4444vw;
     border: 1px solid #ccc;
     border-radius: 16px;
+    img{
+        width: 100%;
+        height: 44.4444vw;
+    }
 `
 export const TextArea = styled.div`
+    height: 11.1111vw;
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 700;

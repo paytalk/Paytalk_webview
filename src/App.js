@@ -25,6 +25,9 @@ import RemittanceComplete from './components/More/RemittanceComplete';
 
 
 function App({index}) {
+
+  
+
   return (
     <Routes>
       <Route path='/' element ={<MainPage />} />
@@ -36,7 +39,7 @@ function App({index}) {
       <Route path = '/store/Pay' element = {<PayMentPage />} />
       <Route path = 'store/PayComplete' element = { <PayCompletePage />} />
       <Route path ='/chat' element= { <ChatPage />} />
-      <Route path ='/chat/*' element = {<ChatDetailPage />} />
+      <Route path ='/chat/Detail' element = {<ChatDetailPage />} />
       <Route path = '/more' element = {<MorePage />} />
       <Route path = '/BPoint' element = {<PointHistoryPage />} />
       <Route path = '/exchange' element = {<ExChange />} />

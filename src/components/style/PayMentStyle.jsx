@@ -1,5 +1,24 @@
 import styled from "styled-components";
+import {HiChevronLeft} from "react-icons/hi"
+import { HiCheck } from "react-icons/hi";
+export const BackIcon = styled(HiChevronLeft)`
+    position: absolute;
+    top: 2.5vh;
+    margin-left: 4.444vw;
+    font-size: 7.0000vw;
+`
 
+export const ItemDetailTop = styled.div`
+    width: 100%;
+    height: 8.25vh;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5.5556vw;
+    line-height: 8.25vh;
+    text-align: center;
+    border-bottom: 1px solid #EEEEEE;;
+`
 export const Gubun = styled.div`
     width: 100%;
     height: 0.9804vh;
@@ -8,10 +27,11 @@ export const Gubun = styled.div`
 
 export const PayMentWrap = styled.div`
     position: absolute;
+    top: 0;
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    z-index: 3;
+    z-index: 5;
     background-color: #fff;
 `
 export const address = styled.div`
@@ -48,16 +68,21 @@ export const PayMent = styled.div`
 export const Bpay = styled.div`
 
 `
-export const CreditCard =styled.div`
-    
-`
+
 export const CheckBox = styled.div`
     display: inline-block;
     width: 6.6667vw;
     height: 6.6667vw;
-    background: ${props=> props.checked == 'checked' ? "#5C63E5" : "#BCBCBC"};
+    background: ${props=> props.checked === 'checked' ? "#5C63E5" : "#BCBCBC"};
     border-radius: 9px;
     margin: 1vh 2.2222vw 0 4.4444vw;
+    padding: 1vw;
+`
+export const CheckIcon = styled(HiCheck)`
+    
+    text-align: center;
+    font-size: 4.4444vw;
+    color: #fff;
 `
 export const PayTitle = styled.div`
     display: inline-block;
@@ -65,12 +90,12 @@ export const PayTitle = styled.div`
     font-style: normal;
     font-weight: 700;
     font-size: 5.0000vw;
-    color: ${props=> props.checked == 'checked' ? "#5C63E5" : "#BCBCBC"};;
+    color: ${props=> props.checked === 'checked' ? "#5C63E5" : "#BCBCBC"};;
     transform: translateY(-0.6vh);
 `
 export const PayBox = styled.div`
     width: 91.1111vw;
-    height: 10.0000vh;
+    height: 22.2222vw;
     background: ${(props)=>(props.bgColor)};
     border-radius: 9px;
     margin: 0 auto 1vh auto;
@@ -82,7 +107,7 @@ export const PayBox = styled.div`
         font-style: normal;
         font-weight: 400;
         font-size: 3.8889vw;
-        color: #FFFFFF;
+        color: ${(props)=>(props.color)};
     }
     span{
         margin-left: 12vw;
@@ -90,7 +115,7 @@ export const PayBox = styled.div`
         font-style: normal;
         font-weight: 400;
         font-size: 3.8889vw;
-        color: #FFFFFF;
+        color: ${(props)=>(props.color)};
     }
     span.bold{
         font-family: 'Pretendard';
@@ -100,7 +125,30 @@ export const PayBox = styled.div`
         color: #FFFFFF;
     }
 `
+export const CreditCard =styled.div`
+    ${PayBox}{
+        width: 91.1111vw;
+        height: 27.4444vw;
+        padding-left: 4.4444vw;
+        p{
+            
+            text-align: left;
+            font-family: 'Pretendard';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
 
+            color: #666666;
+        }
+        p:last-child{
+            text-align: right;
+            font-family: 'Pretendard';
+            font-style: normal;
+        font-weight: 400;
+        font-size: 3.8889vw;
+        }
+    }
+`
 export const Cost = styled.div`
     margin: 1vh 4.444vw 2vh 0;
     text-align: right;
@@ -130,6 +178,10 @@ export const ImgArea = styled.div`
     height: 22.2222vw;
     border-radius: 16px;
     background-color: #181818;
+    img{
+        width: 22.2222vw;
+        height: 22.2222vw;
+    }
 `
 export const TextArea = styled.div`
     width: 64.4444vw;
@@ -138,6 +190,7 @@ export const TextArea = styled.div`
         font-style: normal;
         font-weight: 700;
         font-size: 4.4444vw;
+        word-break: keep-all;
     }
     p:nth-child(2){
         font-family: 'Pretendard';

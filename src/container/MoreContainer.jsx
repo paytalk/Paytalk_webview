@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import ItemTop from "../common/ItemTop";
 import * as m from "./style/MoreContainerStyle";
-
+const BaseURL = 'https://paytalk.github.io/Paytalk_webview';
 const MoreContainer = () => {
     const nav = useNavigate();
     return(
@@ -10,7 +10,9 @@ const MoreContainer = () => {
             <m.MoreContainerArea>
             <m.ItemDetailTop>더 보기</m.ItemDetailTop>
                 <m.UserProfileArea>
-                    <m.UserProfile></m.UserProfile>
+                    <m.UserProfile>
+                        <img src={`${BaseURL}`+'/img/SalesDetail/블루비즈.png'} alt="프로필"/>
+                    </m.UserProfile>
                     <m.UserText>
                         <h3>홍길동</h3>
                         <p>ygh522@gmail.com</p>

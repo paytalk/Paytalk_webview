@@ -37,6 +37,10 @@ export const ImgArea = styled.div`
     border-radius: 16px;
     margin-left: 4.4444vw;
     margin-top: 2vh;
+    img{
+        width: 22.2222vw;
+        height: 22.2222vw;
+    }
 `
 export const InfoArea = styled.div`
     margin-left: 4.4444vw;
@@ -44,6 +48,7 @@ export const InfoArea = styled.div`
 `
 export const Title = styled.div`
     width: 64.4444vw;
+    height: 11.1111vw;
     font-family: 'Pretendard';
     font-style: normal;
     font-weight: 700;
@@ -135,7 +140,7 @@ export const ProgressBar = styled.div`
 export const Progress = styled.div`
     width: 30%;
     height: 100%;
-    background-color: #BCBCBC;
+    background-color: #5D5FEE;
 `
 export const ImgBox = styled.div`
     width: 91.1111vw;
@@ -143,4 +148,7 @@ export const ImgBox = styled.div`
     margin: 0 auto;
     background-color: #ccc;
     border-radius: 16px;
+    img{
+        width: 91.1111vw;
+    }
 `

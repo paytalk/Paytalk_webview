@@ -5,13 +5,15 @@ export const SubscribeWrap = styled.div`
     width: 100%;
     height: 100vh;
     position: absolute;
+    
 `
 export const SubscribeArea = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 99vh;
     max-width: 480px;
     margin: 0 auto;
     padding-top: 2vh;
+    overflow: scroll;
     h1{
     padding-left: 4.444vw;
     font-family: 'Pretendard';
@@ -67,11 +69,15 @@ export const Total = styled.div`
         color: #000000;
     }
 `
+export const ItemArea = styled.div`
+    width: 100%;
+    height: 64vh;
+    overflow: scroll;
+`
 
 export const SubscribeUl = styled.ul`
     background-color: #f8f8f8;
     border-top: 1px solid #eeeeee;
-    height: 80vh;
     overflow: scroll;
 `
 export const SubscribeLi = styled.li`
@@ -85,6 +91,10 @@ export const ImgArea = styled.div`
     height: 22.2222vw;
     background-color: #ccc;
     border-radius: 16px;
+    img{
+        width: 22.2222vw;
+        height: 22.2222vw;
+    }
 `
 export const InfoArea = styled.div`
     margin-left: 4.4444vw;

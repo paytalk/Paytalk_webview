@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#fff" />
     <meta
       name="description"
       content="Web site created using create-react-app"
@@ -15,34 +15,27 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
     <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-wep-app-capable" content="yes">
 
-    <title>React App</title>
+    <script type="text/javascript">
+      window.addEventListener("load",function() {
+    setTimeout(function(){
+        // This hides the address bar:
+        window.scrollTo(0, 0,1);
+    }, false);
+    });
+    </script>
+    <style>
+      body { min-height:100vh; }     
+      body[orient="portrait"] { min-height:100vh; }
+      body[orient="landscape"] { min-height:100vh; }  
+    </style>
+    <title>페이톡 웹뷰</title>
   </head>
   <body >
-    <script type="text/javascript">
-      window.addEventListener('load',function(){window.scrollTo(0,1),false})
-    </script>
+
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

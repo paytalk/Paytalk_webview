@@ -25,7 +25,9 @@ const ChatTemplate = ({setChatDetail,ChatName,chat}) => {
                         setHistory(false)
                         }}></c.MenuBtn>
                 </c.Top>
-                <c.History overflow = {history ? "scroll" : "hidden"} height ={history ? "87.5vh" : "5vh"}>
+                <c.History overflow = {history ? "scroll" : "hidden"} height ={history ? "87.5vh" : "5vh"}
+                bgColor = {history ? "#f8f8f8" : "rgba(0, 0, 0, 0.2)"}
+                >
                     <p onClick={()=> {
                         setHistory(!history)
                         setOpen(-1)
@@ -68,10 +70,12 @@ const ChatTemplate = ({setChatDetail,ChatName,chat}) => {
                 </c.ChatArea>
                 <c.ChatInputArea>
                     <c.ChatInputBox></c.ChatInputBox>
-                    <c.ChatSend></c.ChatSend>
+                    <c.ChatSend>
+                        <img src={`${BaseURL}`+'/img/send.png'}  alt='이미지'/>
+                    </c.ChatSend>
                 </c.ChatInputArea>
             </c.ChatTemplateArea>
-            {side ? <ChatSide position='0'/> : <ChatSide position='-100%'/>}
+            {side ? <ChatSide setModal={setModal} setSide ={setSide} position='0'/> : <ChatSide setSide ={setSide} setModal={setModal} position='-100%'/>}
             {modal ? <SellerProfile OnClick={()=>{
                 setModal(false)
                 

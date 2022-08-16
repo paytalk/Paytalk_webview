@@ -1,12 +1,32 @@
 import styled from "styled-components";
+import {HiChevronLeft} from "react-icons/hi"
 
+export const BackIcon = styled(HiChevronLeft)`
+    position: absolute;
+    top: 2.5vh;
+    margin-left: 4.444vw;
+    font-size: 7.0000vw;
+`
+
+export const ItemDetailTop = styled.div`
+    width: 100%;
+    height: 8.25vh;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5.5556vw;
+    line-height: 8.25vh;
+    text-align: center;
+    border-bottom: 1px solid #EEEEEE;;
+`
 
 export const ItemDetailWrap = styled.div`
     position: absolute;
+    top: 0;
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    z-index: 3;
+    z-index: 4;
     background-color: #fff;
     &.dark{
         background-color: #000;
@@ -31,11 +51,15 @@ export const ItemArea = styled.div`
 
 export const ImgArea = styled.div`
     width: 91.1111vw;
-    height: 41.0000vh;
+    height: 91.1111vw;
     margin: 2vh 0 0 0;
     border: 1px solid #ccc;
     border-radius: 16px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+    img{
+        width: 91.1111vw;
+        height: 91.1111vw;
+    }
 `
 
 
@@ -45,7 +69,8 @@ export const ItemTitle = styled.div`
     font-style: normal;
     font-weight: 700;
     font-size: 5.0000vw;
-    padding: 2.0000vh 4.4444vw 0 0;
+    padding: 2.0000vh 4.4444vw 0 4.4444vw;
+    word-break: keep-all;
 `
 export const Cost = styled.div`
         margin-top: 1vh;

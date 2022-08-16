@@ -1,10 +1,10 @@
 import React from "react";
-import ChatTemplate from "../components/chat/ChatTemplate";
+import ChatTemplate2 from "../components/chat/ChatTemplate2";
 
 const ChatDetailPage = () =>{
     return(
         <>
-        <ChatTemplate />
+        <ChatTemplate2 />
         </>
     )
 }

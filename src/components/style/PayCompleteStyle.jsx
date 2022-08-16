@@ -1,6 +1,23 @@
 import styled from "styled-components";
+import {HiChevronLeft} from "react-icons/hi"
+export const BackIcon = styled(HiChevronLeft)`
+    position: absolute;
+    top: 2.5vh;
+    margin-left: 4.444vw;
+    font-size: 7.0000vw;
+`
 
-
+export const ItemDetailTop = styled.div`
+    width: 100%;
+    height: 8.25vh;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5.5556vw;
+    line-height: 8.25vh;
+    text-align: center;
+    border-bottom: 1px solid #EEEEEE;;
+`
 
 export const Gubun = styled.div`
     width: 100%;
@@ -12,8 +29,9 @@ export const PayCompleteWrap = styled.div`
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    z-index: 3;
+    z-index: 6;
     background-color: #fff;
+    top: 0;
 `
 
 export const CompleteTitle =styled.div`
@@ -34,9 +52,14 @@ export const ImgArea = styled.div`
     height: 22.2222vw;
     border-radius: 16px;
     background-color: #181818;
+    img{
+        width: 22.2222vw;
+        height: 22.2222vw;
+    }
 `
 export const TextArea = styled.div`
     width: 64.4444vw;
+    word-break: keep-all;
     p:nth-child(1){
         font-family: 'Pretendard';
         font-style: normal;

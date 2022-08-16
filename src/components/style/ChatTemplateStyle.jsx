@@ -10,7 +10,7 @@ export const ChatTemplateWrap = styled.div`
     height: 100vh;
     z-index: 2;
     overflow: hidden;
-    background-color: #fff;
+    background-color: #B6C8D7;;
 `
 export const ChatTemplateArea = styled.div`
     width: 100%;
@@ -27,21 +27,22 @@ export const Top = styled.div`
 export const BackBtn = styled(BiArrowBack)`
     font-size: 4vh;
     
-    color: #ccc;
+    color: #7D7D7D;
 `
 export const MenuBtn = styled(BiMenu)`
     font-size: 4vh;
-    color: #ccc;
+    color: #7D7D7D;
 `
 export const Name = styled.div`
     font-size: 3vh;
+    color: #7D7D7D;
 `
 
 export const History = styled.div`
     width: 100%;
     height: ${(props) => props.height};
     overflow: ${(props)=> props.overflow};
-    background-color:#EEEEEE;
+    background-color: ${(props)=>props.bgColor};
     position: absolute;
     z-index: 888;
     p{
@@ -133,7 +134,7 @@ export const ChatArea = styled.div`
     width: 100%;
     height: 82.5vh;
     margin-top: 5vh;
-    background-color: #cfd8dc;
+    background-color:#CADEEF;
 `
 export const ChatInputArea = styled.div`
     display: flex;
@@ -156,6 +157,10 @@ export const ChatSend = styled.div`
     width: 13%;
     height: 100%;
     background-color: #5C63E5;
+    img{
+        width: 50%;
+        margin: 3.8889vw;
+    }
 `
 
 export const ChatSample = styled.div`

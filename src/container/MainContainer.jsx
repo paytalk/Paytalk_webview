@@ -11,6 +11,7 @@ const MainContainer = () => {
     
 
     return(
+        <>
         <m.ContainerWrap >
             <m.ContainerArea>
                 <m.MainTitle>
@@ -18,7 +19,7 @@ const MainContainer = () => {
                     <p>새로운 구독상품을 가입해보세요!!</p>
                 </m.MainTitle>
                 <m.BoxArea>
-                    <m.LeftBoxArea>
+                    <m.LeftBoxArea onClick={()=>nav('/BPoint')}>
                         <p>20,000,000원</p>
                         <p>B - PAY 포인트</p>
                         <img src={`${BaseURL}`+'/img/Group 39.png'} alt="이미지" />
@@ -47,6 +48,10 @@ const MainContainer = () => {
                 </m.Flex>
             </m.ContainerArea>
         </m.ContainerWrap>
+        <m.ContainerWrapPC>
+            <h1>해당 웹은 모바일 전용입니다</h1>
+        </m.ContainerWrapPC>
+        </>
     )
 }
 

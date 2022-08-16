@@ -162,7 +162,8 @@ export const SubScribeCycle = styled.div`
     transition: all 0.5s linear;
     z-index: 999;
     width: 100%;
-    height: 50%;
+    height: 70%;
+    
     background-color: #fff;
     padding: 0 4.4444vw;
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);

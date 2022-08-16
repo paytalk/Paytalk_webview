@@ -1,4 +1,18 @@
 import styled from "styled-components";
+import { HiChevronLeft } from "react-icons/hi";
+
+export const Top = styled.div`
+    width: 100%;
+    height: 6.25vh;
+    display: flex;
+    padding: 1.5vh 3vw;
+    justify-content: space-between;
+`
+export const BackBtn = styled(HiChevronLeft)`
+    font-size: 4vh;
+    
+    color: #7D7D7D;
+`
 
 export const ExchangeCompleteWrap = styled.div`
     width: 100%;

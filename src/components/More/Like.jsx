@@ -17,7 +17,7 @@ const Like = () => {
                 <l.LikeInfo>
                     <l.LikeTitle>{index.name}</l.LikeTitle>
                     <l.LikePrice>{index.price}</l.LikePrice>
-                    <l.LikeBtn>구톡하기</l.LikeBtn>
+                    <l.LikeBtn>구독하기</l.LikeBtn>
                 </l.LikeInfo>
             </l.Likeli>
             )}

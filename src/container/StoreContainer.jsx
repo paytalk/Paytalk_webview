@@ -25,10 +25,11 @@ const StoreContainer = () => {
     const [index,setIndex] = useState(0);
     const [detail,setDetail] = useState(false);
     const nav = useNavigate();
-    
+
     
 
     return(
+        <>
         <s.StoreContainerWrap>
             <s.StoreContainerArea>
             <s.StoreContainerTitle>스토어</s.StoreContainerTitle>
@@ -39,7 +40,7 @@ const StoreContainer = () => {
                     {category.map((index,key)=>
                         <s.StoreCategoryLi onClick={()=>{
                             setIndex(key)
-                            nav(`/store/Detail/${index.title}`)
+                            setDetail(true)
                         }}>
                         <s.StoreCategoryImg>
                             <img src={`${BaseURL}`+ index.img} alt="카테고리 이미지" key={key} />
@@ -61,6 +62,8 @@ const StoreContainer = () => {
             ></RecommendSection>
             </s.StoreContainerArea>
         </s.StoreContainerWrap>
+        {detail ? <StoreDetail index={index} setDetail={setDetail} /> : ""}
+        </>
     )
 }
 

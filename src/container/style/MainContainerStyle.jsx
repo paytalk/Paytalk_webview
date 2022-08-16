@@ -4,9 +4,26 @@ export const ContainerWrap = styled.div`
     position: relative;
     width: 100%;
     height: 100vh;
-    
+    @media screen and (min-width: 514px) {
+        display: none;
+    }
 `
-
+export const ContainerWrapPC = styled.div`
+    display: none;
+    @media screen and (min-width: 514px) {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        z-index: 999;
+        h1{
+            font-size: 8vw;
+            line-height: 100vh;
+            text-align: center;
+        }
+    }
+`
 export const ContainerArea = styled.div`
     width: 100%;
     height: 100vh;
@@ -31,7 +48,7 @@ export const BoxArea = styled.div`
 `
 export const LeftBoxArea = styled.div`
     width: 44.4444vw;
-    height: 86.6667vw;
+    height: 41vh;
     background-color: #5D5FEE;
     
     box-shadow: 4px 4px 4px #ccc;
@@ -54,7 +71,7 @@ export const LeftBoxArea = styled.div`
     }
     img{
         position: relative;
-        top: 35vw;
+        top: 15vh;
         left: 20vw;
         
     }
@@ -64,7 +81,7 @@ export const RightBoxArea = styled.div`
     flex-direction: column;
     justify-content: space-between;
     width: 44.4444vw;
-    height: 86.6667vw;
+    height: 41vh;
     padding-bottom:10px;
     padding-right: 4.4444vw;
 `
@@ -75,6 +92,7 @@ export const ContentBox = styled.div`
     box-shadow: 4px 4px 4px #ccc;
     background-color: #fff;
     border: 1px solid #f3f3f3;
+    
     padding: 2vh 4.444vw;
     p{
         font-family: 'Spoqa Han Sans Neo';
@@ -86,6 +104,7 @@ export const ContentBox = styled.div`
         position: relative;
         bottom: 0;
         left: ${(props)=>(props.left)};
+        transform: translateY(-0.6vh);
     }
 `
 export const Banner = styled.div`

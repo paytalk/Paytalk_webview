@@ -31,6 +31,18 @@ const ChatContainer = () =>{
                         </c.ChatInfo>
                     </c.ChatListLi>
                         )}
+                        <c.ChatListLi onClick={()=>{
+                            nav('/chat/Detail')
+                            }}>
+                        <c.ChatProfile>
+                            <img src={`${BaseURL}`+'/img/SalesDetail/블루비즈.png'} alt="프로필" />
+                        </c.ChatProfile>
+                        <c.ChatInfo>
+                        <c.ChatName>주식회사 소셜</c.ChatName>
+                        <c.ChatMem></c.ChatMem>
+                        <c.ChatPrev>주식회사 소셜님께 400,000원 송금이 완료되었습니다</c.ChatPrev>
+                        </c.ChatInfo>
+                    </c.ChatListLi>
                     </c.ChatListUl>
                 </c.ChatListArea>
             </c.ChatContainerArea>

@@ -49,6 +49,9 @@ export const UserProfile = styled.div`
     border-radius: 24px;
     background-color: #ccc;
     margin-right: 4.4444vw;
+    img{
+        width: 17.7778vw;
+    }
 `
 export const UserText = styled.div`
     margin-top: 1.5vh;

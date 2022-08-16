@@ -75,6 +75,9 @@ export const Btn = styled.div`
     text-align: center;
     margin-right: 2.222vw;
     color: #FFFFFF;
+    img{
+        margin: 1vh 0;
+    }
 `
 
 export const SellerTab = styled.div`

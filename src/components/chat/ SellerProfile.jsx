@@ -25,7 +25,7 @@ const SellerProfile = ({position,OnClick}) =>{
                     <p>리뷰 {Store_head.data.review_cnt}</p>
                 </s.SellerName>
                 <s.Btn width = "8.8889vw" height = "8.8889vw">
-                    <img style={{width : "8.8889vw",height: "8.8889vw"}} src={`${BaseURL}`+'public/img/link (1).png'} alt="이미지" />
+                    <img style={{width : "4.4444vw",height: "4.4444vw"}} src={`${BaseURL}`+'/img/link (1).png'} alt="이미지" />
                 </s.Btn>
                 <s.Btn width = "22.2222vw" height = "8.8889vw">문의하기</s.Btn>
             </s.SellerProfileTop>
