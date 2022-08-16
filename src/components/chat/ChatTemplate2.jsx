@@ -38,20 +38,26 @@ const ChatTemplate2 = ({setChatDetail,ChatName,chat}) => {
                     </c.HistoryDetail>
                     <cc.HistoryUl>
                         <cc.HistoryLi1>
-                            <cc.Img></cc.Img>
+                            <cc.Img>
+                                <img src={`${BaseURL}`+'/img/profile.jpeg'} alt=""/>
+                            </cc.Img>
                             <cc.Name><p>대성물산<span>님이 보낸 돈</span></p></cc.Name>
                             <cc.cost><p><span>400,000원</span> (사십만원)</p></cc.cost>
                         </cc.HistoryLi1>
                         <cc.HistoryLi2>
                         <cc.ImgArea>
                         <cc.Item>
-                            <cc.Img></cc.Img>
+                            <cc.Img>
+                            <img src={`${BaseURL}`+'/img/profile.jpeg'} alt=""/>
+                            </cc.Img>
                             <cc.Name><p>대성물산<span></span></p></cc.Name>
                             </cc.Item>
                             <cc.DownIcon></cc.DownIcon>
                             <cc.Item>
-                            <cc.Img></cc.Img>
-                            <cc.Name><p>대성물산<span></span></p></cc.Name>
+                            <cc.Img>
+                            <img src={`${BaseURL}`+'/img/profile.jpeg'} alt=""/>
+                            </cc.Img>
+                            <cc.Name><p>주식회사 소셜<span></span></p></cc.Name>
                             </cc.Item>
                             </cc.ImgArea>
                             <cc.InfoArea>
@@ -81,13 +87,17 @@ const ChatTemplate2 = ({setChatDetail,ChatName,chat}) => {
                         <cc.HistoryLi2>
                             <cc.ImgArea>
                             <cc.Item>
-                            <cc.Img></cc.Img>
+                            <cc.Img>
+                            <img src={`${BaseURL}`+'/img/profile.jpeg'} alt=""/>
+                            </cc.Img>
                             <cc.Name><p>대성물산<span></span></p></cc.Name>
                             </cc.Item>
                             <cc.DownIcon></cc.DownIcon>
                             <cc.Item>
-                            <cc.Img></cc.Img>
-                            <cc.Name><p>대성물산<span></span></p></cc.Name>
+                            <cc.Img>
+                            <img src={`${BaseURL}`+'/img/profile.jpeg'} alt=""/>
+                            </cc.Img>
+                            <cc.Name><p>주식회사 소셜<span></span></p></cc.Name>
                             </cc.Item>
                             </cc.ImgArea>
                             <cc.InfoArea>

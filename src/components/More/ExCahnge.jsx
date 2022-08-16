@@ -15,8 +15,8 @@ const ExChange = () => {
     const nav = useNavigate();
     const handleFormInput = (e) => {
         setFormInput(e.target.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') +'원');
-        setCommission((e.target.value/1.8).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') +'원');
-        setExchange((e.target.value-e.target.value/10).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') +'원')
+        setCommission((e.target.value*0.018).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') +'원');
+        setExchange((e.target.value-e.target.value*0.018).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') +'원')
     };
 
 

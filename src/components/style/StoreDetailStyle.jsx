@@ -4,8 +4,7 @@ import { HiSearch } from "react-icons/hi";
 export const StoreDetailWrap = styled.div`
     position: absolute;
     top: 0;
-    bottom: 0;
-    z-index: 5;
+    z-index: 3;
     width: 100%;
     height: 100vh;
     background-color: #fff;

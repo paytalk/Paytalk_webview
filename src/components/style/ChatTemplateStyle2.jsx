@@ -26,6 +26,10 @@ export const Img = styled.div`
     border-radius: 8px;
     display: inline-block;
     margin-right: 4.4444vw;
+    img{
+        width: 11.1111vw;
+        height: 11.1111vw;
+    }
 `
 export const Name = styled.div`
     display: inline-block;
