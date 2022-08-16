@@ -77,7 +77,7 @@ export const Img = styled.div`
     }
 `
 export const Name = styled.div`
-    width: 42.4444vw;
+    width: 43.4444vw;
     height: 13.3333vw;
     font-family: 'Pretendard';
     font-style: normal;

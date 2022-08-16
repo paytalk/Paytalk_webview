@@ -20,10 +20,15 @@ export const SubscribeArea = styled.div`
     font-style: normal;
     font-weight: 700;
     font-size: 5.5556vw;
-
-
-
-color: #181818;
+    color: #181818;
+    }
+    h2{
+        padding-left: 4.444vw;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.5556vw;
+    color: #181818;
     }
 `
 export const Button =styled(BiChevronLeft)`
@@ -71,7 +76,7 @@ export const Total = styled.div`
 `
 export const ItemArea = styled.div`
     width: 100%;
-    height: 64vh;
+    height: 66vh;
     overflow: scroll;
 `
 

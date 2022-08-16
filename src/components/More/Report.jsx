@@ -26,13 +26,13 @@ const Report = () => {
                 8월동안 2건의 구독상품이 추가되었어요
             </r.SubTitle>
             <r.SubscribeItem>
-                <r.Img><img src={`${BaseURL}`+'/img/categoryImage/2.png'} alt="이미지"/></r.Img>
-                <r.Name>[LG] 트롬 스타일러 일반용량 대여</r.Name>
+                <r.Img><img src={`${BaseURL}`+'/img/Img1.png'} alt="이미지"/></r.Img>
+                <r.Name>[현대모비스] 프리미엄 저점도 가솔린 엔진오일</r.Name>
                 <r.PayDay>매월 15일 결제</r.PayDay>
             </r.SubscribeItem>
             <r.SubscribeItem>
-                <r.Img><img src={`${BaseURL}`+'/img/categoryImage/2.png'} alt="이미지"/></r.Img>
-                <r.Name>[LG] 트롬 스타일러 일반용량 대여</r.Name>
+                <r.Img><img src={`${BaseURL}`+'/img/Img2.png'} alt="이미지"/></r.Img>
+                <r.Name>[LG] 트롬 스타일러 슬림형 대여</r.Name>
                 <r.PayDay>매월 15일 결제</r.PayDay>
             </r.SubscribeItem>
             <r.Gubun></r.Gubun>

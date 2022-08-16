@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import * as m from './style/MainContainerStyle'
@@ -8,7 +8,7 @@ const BaseURL = 'https://paytalk.github.io/Paytalk_webview';
 const MainContainer = () => {
     const nav = useNavigate();
 
-    
+    const [modal,setModal] = useState(false);
 
     return(
         <>
@@ -39,10 +39,10 @@ const MainContainer = () => {
                     <p>이벤트 상품 소개</p>
                 </m.Banner>
                 <m.Flex>
-                    <m.ContentBox left='20vw'><p>공과금</p>
+                    <m.ContentBox onClick={()=>setModal(true)} left='20vw'><p>공과금</p>
                     <img src={`${BaseURL}`+'/img/Group 34-1.png'} alt="이미지" />
                     </m.ContentBox>
-                    <m.ContentBox left='20vw'><p>청구서</p>
+                    <m.ContentBox onClick={()=>setModal(true)} left='20vw'><p>청구서</p>
                     <img src={`${BaseURL}`+'/img/Group 14.png'} alt="이미지" />
                     </m.ContentBox>
                 </m.Flex>
@@ -51,6 +51,12 @@ const MainContainer = () => {
         <m.ContainerWrapPC>
             <h1>해당 웹은 모바일 전용입니다</h1>
         </m.ContainerWrapPC>
+        {modal ? <m.ModalBg>
+        <m.Modal onClick={()=>setModal(false)}>
+            <p>개발 예정입니다</p>
+            <m.Btn>확인</m.Btn>
+        </m.Modal>
+        </m.ModalBg> : ""}
         </>
     )
 }

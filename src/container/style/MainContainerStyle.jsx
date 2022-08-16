@@ -152,3 +152,53 @@ export const Flex = styled.div`
     }
     }
 `
+export const ModalBg = styled.div`
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+`
+export const Modal = styled.div`
+    position: absolute;
+    width: 64.4444vw;
+    height: 31.1111vw;
+    background: #FFFFFF;
+    border-radius: 8px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    p{
+        font-family: 'Pretendard';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 4.4444vw;
+        text-align: center;
+        color: #000000;
+        line-height: 25.1111vw;
+    }
+`
+
+export const Btn =styled.div`
+    position: absolute;
+    width: 20vw;
+    bottom: 1vh;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    background-color: #5C63E5;
+    color: #fff;
+    height: 6.0000vh;
+    margin-right: 2.2222vw;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+
+    line-height: 6vh;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5vw;
+`

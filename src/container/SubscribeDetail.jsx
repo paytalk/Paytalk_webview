@@ -13,7 +13,8 @@ const SubscribeDetail = () => {
         <s.SubscribeWrap>
             <s.SubscribeArea>
                 <s.Button onClick={()=>nav(-1)}></s.Button>
-                <h1>사용자님은 의료서비스에<br/>구독을 많이 하셨네요</h1>
+                <h2>내 구독 모아보기</h2>
+                <h1>5개 구독중</h1>
                 <s.FilterArea>
                     <s.Filter><p>최근 출금 순</p></s.Filter>
                     <s.Total><p>{subscribe_over.total_amount}</p></s.Total>
