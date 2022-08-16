@@ -25,7 +25,7 @@ const ExChange = () => {
         <e.ExchangeWrap>
             <ItemTop title='환전하기' />
             <e.Title>얼마나 환전하시겠어요?</e.Title>
-            <e.InputBox type='text' placeholder="1,000,000원" onChange={handleFormInput}></e.InputBox>
+            <e.InputBox type='number' pattern="[0-9]*" inputMode="numeric" placeholder="1,000,000원" onChange={handleFormInput}></e.InputBox>
             <e.balance>환전 가능한 B Pay 2,000,000원</e.balance>
             <e.Gubun></e.Gubun>
             <e.Title>어느계좌로 돈을 받으시겠어요?</e.Title>

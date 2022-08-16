@@ -20,6 +20,10 @@ export const ExchangeCompleteWrap = styled.div`
     position: absolute;
     z-index: 3;
     background-color: #fff;
+    background-image: url('https://paytalk.github.io/Paytalk_webview/img/pose 12 view 2.png');
+    background-repeat: no-repeat;
+    background-position: right bottom 14vw;
+    
 `
 export const Title = styled.div`
     margin: 1vh 0 8.8889vw 4.4444vw;
