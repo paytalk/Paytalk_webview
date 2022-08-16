@@ -10,11 +10,11 @@ const RemittanceComplete = () => {
             <ItemTop />
             <r.Title>
                 <p>B Pay로 1,000,000원</p>
-                <p>충전이 완료되었습니다</p>
+                <p>송금이 완료되었습니다</p>
             </r.Title>
             <r.ExchangeInfoBox>
-                <div><p>충전금액</p><span>1,000,000원</span></div>
-                <div><p>잔액</p><span>2,100,000원</span></div>
+                <div><p>송금금액</p><span>1,000,000원</span></div>
+                <div><p>잔액</p><span>1,000,000원</span></div>
             </r.ExchangeInfoBox>
             <r.Btn onClick={()=>nav('/more')}><p>확인</p></r.Btn>
         </r.ExchangeCompleteWrap>

@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import * as r from "../style/RecommendSectionStyle";
+import StoreDetail2 from "./StoreDetail_2";
 const BaseURL = 'https://paytalk.github.io/Paytalk_webview';
 
 const RecommendSection = ({title,data}) => {
+    const [Detail,setDetail] = useState(false);
     return(
-        <r.StoreRecommendBox>
+        <>
+        <r.StoreRecommendBox onClick={()=>setDetail(true)}>
         <p>{title}</p>
         <r.StoreRecommendItemBox>
         <r.StoreRecommendUl>
@@ -21,6 +24,14 @@ const RecommendSection = ({title,data}) => {
         </r.StoreRecommendUl>
         </r.StoreRecommendItemBox>
         </r.StoreRecommendBox>
+        {Detail ? <>
+        <StoreDetail2 
+        setDetail = {setDetail}
+        title = {title}
+        data = {data}
+        />
+        </> : ""}
+        </>
     )
 }
 

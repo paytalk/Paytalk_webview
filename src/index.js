@@ -6,12 +6,14 @@ import GlobalStyle from './GlobalStyles';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Nav from './common/Nav';
 import "./common.css"
+import ScrollToTop from './common/ScrollTop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router basename={process.env.PUBLIC_URL}>
       <GlobalStyle />
+      <ScrollToTop />
       <Nav />
       <App />
     </Router>
