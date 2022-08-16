@@ -3,9 +3,11 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import RecommendSection from "../components/Store/RecommendSection";
 import * as s from "./style/StoreStyle";
+import * as r from "../components/style/RecommendSectionStyle"
 import { Data } from "../Data/Store_Main1";
 import { Data2 } from "../Data/Store_Main2";
 import StoreDetail from "../components/Store/StoreDetail";
+import StoreDetail2 from "../components/Store/StoreDetail_2";
 
 
 const category = [
@@ -24,8 +26,8 @@ const BaseURL = 'https://paytalk.github.io/Paytalk_webview';
 const StoreContainer = () => {
     const [index,setIndex] = useState(0);
     const [detail,setDetail] = useState(false);
-    const nav = useNavigate();
-
+    const [detail2,setDetail2] = useState(false);
+    const [detail3,setDetail3] = useState(false);
     
 
     return(
@@ -51,18 +53,68 @@ const StoreContainer = () => {
                 </s.StoreCategoryUl>
             </s.StoreCategoryBox>
             <s.Gubun></s.Gubun>
-            <RecommendSection
+            {/* <RecommendSection
             title={Data.data.market1_title}
             data={Data.data.product}
-            ></RecommendSection>
+            ></RecommendSection> */}
+            <r.StoreRecommendBox >
+                <r.Title  onClick={()=>setDetail2(true)}>
+        <p>{Data.data.market1_title}</p>
+        <span>더보기</span>
+        </r.Title>
+        <r.StoreRecommendItemBox>
+        <r.StoreRecommendUl>
+            {Data.data.product.map((index)=>
+            <r.StoreRecommendLi>
+            <r.StoreRecommendImg>
+                <img src={`${BaseURL}`+index.image} alt="이미지" />
+            </r.StoreRecommendImg>
+            <r.StoreRecommendTitle>{index.name}</r.StoreRecommendTitle>
+            <r.StoreRecommendCost>{index.price}</r.StoreRecommendCost>
+            </r.StoreRecommendLi>
+            )}
+            
+        </r.StoreRecommendUl>
+        </r.StoreRecommendItemBox>
+        
+        </r.StoreRecommendBox>
             <s.Gubun></s.Gubun>
-            <RecommendSection
+            {/* <RecommendSection
             title={Data2.data.market2_title}
             data={Data2.data.product}
-            ></RecommendSection>
+            ></RecommendSection> */}
+            <r.StoreRecommendBox >
+                <r.Title onClick={()=>setDetail3(true)}>
+                <p >{Data2.data.market2_title}</p><span>더보기</span>
+                </r.Title>
+        
+        <r.StoreRecommendItemBox>
+        <r.StoreRecommendUl>
+            {Data2.data.product.map((index)=>
+            <r.StoreRecommendLi>
+            <r.StoreRecommendImg>
+                <img src={`${BaseURL}`+index.image} alt="이미지" />
+            </r.StoreRecommendImg>
+            <r.StoreRecommendTitle>{index.name}</r.StoreRecommendTitle>
+            <r.StoreRecommendCost>{index.price}</r.StoreRecommendCost>
+            </r.StoreRecommendLi>
+            )}
+            
+        </r.StoreRecommendUl>
+        </r.StoreRecommendItemBox>
+        
+        </r.StoreRecommendBox>
             </s.StoreContainerArea>
         </s.StoreContainerWrap>
-        {detail ? <StoreDetail index={index} setDetail={setDetail} /> : ""}
+        {detail ? <StoreDetail index={index} setDetail={setDetail} /> : detail2 ? <StoreDetail2 
+        title ={Data.data.market1_title}
+        data ={Data.data.product}
+        setDetail ={setDetail2}
+        /> : detail3 ? <StoreDetail2 
+        title ={Data2.data.market2_title}
+        data ={Data2.data.product}
+        setDetail ={setDetail3}
+        /> : ""}
         </>
     )
 }

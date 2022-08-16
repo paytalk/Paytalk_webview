@@ -7,8 +7,8 @@ const RecommendSection = ({title,data}) => {
     const [Detail,setDetail] = useState(false);
     return(
         <>
-        <r.StoreRecommendBox onClick={()=>setDetail(true)}>
-        <p>{title}</p>
+        <r.StoreRecommendBox >
+        <p onClick={()=>setDetail(true)}>{title}</p>
         <r.StoreRecommendItemBox>
         <r.StoreRecommendUl>
             {data.map((index)=>
@@ -23,14 +23,9 @@ const RecommendSection = ({title,data}) => {
             
         </r.StoreRecommendUl>
         </r.StoreRecommendItemBox>
+        
         </r.StoreRecommendBox>
-        {Detail ? <>
-        <StoreDetail2 
-        setDetail = {setDetail}
-        title = {title}
-        data = {data}
-        />
-        </> : ""}
+        
         </>
     )
 }

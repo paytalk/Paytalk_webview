@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import * as s from "../style/StoreDetailStyle";
+import * as s from "../style/StoreDetailStyle2";
 
-import ItemDetail from "./ItemDetail";
+
 
 const BaseURL = 'https://paytalk.github.io/Paytalk_webview';
 
@@ -16,7 +16,6 @@ const StoreDetail2 = ({title,data,setDetail}) => {
     const nav = useNavigate();
     const [pay,setPay] = useState(false);
     return(
-        <>
         <s.StoreDetailWrap>
             <s.StoreTop>
             <s.StoreDetailFlex>
@@ -47,8 +46,6 @@ const StoreDetail2 = ({title,data,setDetail}) => {
                 </s.ItemUl>
             </s.ItemArea>
         </s.StoreDetailWrap>
-        {pay ? <ItemDetail  setPay={setPay} /> : ""}
-        </>
     )
 }
 

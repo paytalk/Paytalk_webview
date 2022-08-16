@@ -5,12 +5,25 @@ export const StoreRecommendBox = styled.div`
     height: 63.6667vw;
     padding: 1.9608vh 0 0 4.4444vw;
     width: 100%;
-    
+    overflow: hidden;
     p{
         font-family: 'Spoqa Han Sans Neo';
         font-style: normal;
         font-weight: 700;
         font-size: 4.4444vw;
+    }
+`
+export const Title = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin-right: 4.4444vw;
+    span{
+        font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.8889vw;
+    color: #BCBCBC;
+
     }
 `
 export const StoreRecommendItemBox = styled.div`
