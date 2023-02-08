@@ -1,23 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
+import App from "./Rotuer";
 import GlobalStyle from "./GlobalStyles";
 import { BrowserRouter as Router } from "react-router-dom";
 import Nav from "./common/Nav";
+import { Provider } from "react-redux";
+import store from "./useRedux/rootReducer";
 import "./common.css";
 import ScrollToTop from "./common/ScrollTop";
-
+import "./styles/reset.scss";
+import "./styles/common.scss";
 const rootElement = document.getElementById("root");
 if (!rootElement) throw new Error("Failed to find the root element");
 const root = ReactDOM.createRoot(rootElement);
 root.render(
     <React.StrictMode>
         <Router basename={process.env.PUBLIC_URL}>
-            <GlobalStyle />
-            <ScrollToTop />
-            <Nav />
-            <App />
+            <Provider store={store}>
+                <GlobalStyle />
+                <ScrollToTop />
+                <App />
+            </Provider>
         </Router>
     </React.StrictMode>
 );
