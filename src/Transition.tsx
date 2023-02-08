@@ -16,7 +16,7 @@ const Transition = () => {
     }, [location.pathname]);
 
     useEffect(() => {
-        if (now === "/store/detail") {
+        if (now !== "/store") {
             setAnimation("prev");
         }
         if (now === "/store") {
@@ -33,7 +33,7 @@ const Transition = () => {
             >
                 <Routes location={location}>
                     <Route path="/store" element={<StorePage />} />
-                    <Route path="/store/detail" element={<StoreDetail />} />
+                    <Route path="/store/detail/*" element={<StoreDetail />} />
                 </Routes>
             </CSSTransition>
         </TransitionGroup>

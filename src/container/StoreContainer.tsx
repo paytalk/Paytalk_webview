@@ -23,7 +23,7 @@ const category = [
 const BaseURL = "https://paytalk.github.io/Paytalk_webview";
 
 const StoreContainer = () => {
-    const [index, setIndex] = useState(0);
+    const [Index, setIndex] = useState(0);
     const [detail, setDetail] = useState(false);
     const [detail2, setDetail2] = useState(false);
     const [detail3, setDetail3] = useState(false);
@@ -42,7 +42,7 @@ const StoreContainer = () => {
                             {category.map((index, key) => (
                                 <s.StoreCategoryLi
                                     onClick={() => {
-                                        navigate("/store/detail");
+                                        navigate(`/store/detail/${key}`);
                                     }}
                                 >
                                     <s.StoreCategoryImg>
@@ -100,7 +100,6 @@ const StoreContainer = () => {
                             <p>{Data2.data.market2_title}</p>
                             <span>더보기</span>
                         </r.Title>
-
                         <r.StoreRecommendItemBox>
                             <r.StoreRecommendUl>
                                 {Data2.data.product.map(index => (
@@ -124,23 +123,6 @@ const StoreContainer = () => {
                     </r.StoreRecommendBox>
                 </s.StoreContainerArea>
             </s.StoreContainerWrap>
-            {detail ? (
-                <StoreDetail index={index} setDetail={setDetail} />
-            ) : detail2 ? (
-                <StoreDetail2
-                    title={Data.data.market1_title}
-                    data={Data.data.product}
-                    setDetail={setDetail2}
-                />
-            ) : detail3 ? (
-                <StoreDetail2
-                    title={Data2.data.market2_title}
-                    data={Data2.data.product}
-                    setDetail={setDetail3}
-                />
-            ) : (
-                ""
-            )}
         </>
     );
 };

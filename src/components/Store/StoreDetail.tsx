@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as s from "../style/StoreDetailStyle";
@@ -25,8 +25,15 @@ const cat = [Cat1, Cat1, Cat3, Cat3, Cat5, Cat5, Cat7, Cat7];
 
 const StoreDetail = ({ index, setDetail }: any) => {
     const [open, setOpen] = useState(false);
+    const [num, setNum] = useState(0);
     const nav = useNavigate();
     const [pay, setPay] = useState(false);
+    const location = window.location.href.split("/");
+    useEffect(() => {
+        if (location.length === 7) {
+            setNum(parseInt(location[6]));
+        }
+    }, [location]);
     return (
         <>
             <s.StoreDetailWrap>
@@ -34,7 +41,7 @@ const StoreDetail = ({ index, setDetail }: any) => {
                     <s.StoreDetailFlex>
                         <s.StoreDetailTitle>
                             <span onClick={() => nav(-1)}>&lt;</span>
-                            {array[0]}
+                            {array[parseInt(location[6]) || num]}
                         </s.StoreDetailTitle>
 
                         <s.SearchIcon
@@ -51,7 +58,7 @@ const StoreDetail = ({ index, setDetail }: any) => {
                 </s.StoreTop>
                 <s.ItemArea>
                     <s.ItemUl>
-                        {cat[0].data.map(index => (
+                        {cat[parseInt(location[6]) || num].data.map(index => (
                             <s.ItemLi onClick={() => setPay(true)}>
                                 <s.ImgArea>
                                     <img
