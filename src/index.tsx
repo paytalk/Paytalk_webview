@@ -1,23 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import GlobalStyle from './GlobalStyles';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Nav from './common/Nav';
-import "./common.css"
-import ScrollToTop from './common/ScrollTop';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import GlobalStyle from "./GlobalStyles";
+import { BrowserRouter as Router } from "react-router-dom";
+import Nav from "./common/Nav";
+import "./common.css";
+import ScrollToTop from "./common/ScrollTop";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const rootElement = document.getElementById("root");
+if (!rootElement) throw new Error("Failed to find the root element");
+const root = ReactDOM.createRoot(rootElement);
 root.render(
-  <React.StrictMode>
-    <Router basename={process.env.PUBLIC_URL}>
-      <GlobalStyle />
-      <ScrollToTop />
-      <Nav />
-      <App />
-    </Router>
-  </React.StrictMode>
+    <React.StrictMode>
+        <Router basename={process.env.PUBLIC_URL}>
+            <GlobalStyle />
+            <ScrollToTop />
+            <Nav />
+            <App />
+        </Router>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
