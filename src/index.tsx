@@ -16,7 +16,7 @@ if (!rootElement) throw new Error("Failed to find the root element");
 const root = ReactDOM.createRoot(rootElement);
 root.render(
     <React.StrictMode>
-        <Router basename={process.env.PUBLIC_URL}>
+        <Router basename="https://paytalk.github.io/Paytalk_webview/">
             <Provider store={store}>
                 <GlobalStyle />
                 <ScrollToTop />
