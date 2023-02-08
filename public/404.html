@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <meta name="theme-color" content="#fff" />
+        <meta
+            name="description"
+            content="Web site created using create-react-app"
+        />
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+        <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        <link
+            href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-wep-app-capable" content="yes" />
+
+        <script type="text/javascript">
+            window.addEventListener("load", function () {
+                setTimeout(function () {
+                    // This hides the address bar:
+                    window.scrollTo(0, 0, 1);
+                }, false);
+            });
+        </script>
+        <style>
+            body {
+                min-height: 100vh;
+            }
+            body[orient="portrait"] {
+                min-height: 100vh;
+            }
+            body[orient="landscape"] {
+                min-height: 100vh;
+            }
+        </style>
+        <title>페이톡 웹뷰</title>
+    </head>
+    <body>
+        <div id="root"></div>
+    </body>
+</html>
