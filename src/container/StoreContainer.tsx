@@ -27,7 +27,7 @@ const StoreContainer = () => {
     const [detail, setDetail] = useState(false);
     const [detail2, setDetail2] = useState(false);
     const [detail3, setDetail3] = useState(false);
-
+    const navigate = useNavigate();
     return (
         <>
             <s.StoreContainerWrap>
@@ -42,8 +42,7 @@ const StoreContainer = () => {
                             {category.map((index, key) => (
                                 <s.StoreCategoryLi
                                     onClick={() => {
-                                        setIndex(key);
-                                        setDetail(true);
+                                        navigate("/store/detail");
                                     }}
                                 >
                                     <s.StoreCategoryImg>

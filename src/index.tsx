@@ -11,16 +11,15 @@ import "./common.css";
 import ScrollToTop from "./common/ScrollTop";
 import "./styles/reset.scss";
 import "./styles/common.scss";
+import Transition from "./Transition";
 const rootElement = document.getElementById("root");
 if (!rootElement) throw new Error("Failed to find the root element");
 const root = ReactDOM.createRoot(rootElement);
 root.render(
     <React.StrictMode>
-        <Router basename="https://paytalk.github.io/Paytalk_webview/">
+        <Router basename={process.env.PUBLIC_URL}>
             <Provider store={store}>
-                <GlobalStyle />
-                <ScrollToTop />
-                <App />
+                <Transition />
             </Provider>
         </Router>
     </React.StrictMode>

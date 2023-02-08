@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerWrap = styled.div`
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100vh;
     @media screen and (min-width: 514px) {

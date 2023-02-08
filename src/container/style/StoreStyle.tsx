@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StoreContainerWrap = styled.div`
-    height: 90vh;
+    height: 100vh;
     overflow: scroll;
     position: relative;
     width: 100%;

@@ -77,9 +77,7 @@ const MainContainer = () => {
                     </m.Flex>
                 </m.ContainerArea>
             </m.ContainerWrap>
-            <m.ContainerWrapPC>
-                <h1>해당 웹은 모바일 전용입니다</h1>
-            </m.ContainerWrapPC>
+
             {modal ? (
                 <m.ModalBg>
                     <m.Modal onClick={() => setModal(false)}>

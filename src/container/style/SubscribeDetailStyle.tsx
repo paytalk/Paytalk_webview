@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { BiChevronLeft } from "react-icons/bi";
 
 export const SubscribeWrap = styled.div`
+    position: absolute;
     width: 100%;
     height: 100vh;
-    position: absolute;
 `;
 export const SubscribeArea = styled.div`
     width: 100%;

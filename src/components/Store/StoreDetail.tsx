@@ -33,8 +33,8 @@ const StoreDetail = ({ index, setDetail }: any) => {
                 <s.StoreTop>
                     <s.StoreDetailFlex>
                         <s.StoreDetailTitle>
-                            <span onClick={() => setDetail(false)}>&lt;</span>
-                            {array[index]}
+                            <span onClick={() => nav(-1)}>&lt;</span>
+                            {array[0]}
                         </s.StoreDetailTitle>
 
                         <s.SearchIcon
@@ -51,7 +51,7 @@ const StoreDetail = ({ index, setDetail }: any) => {
                 </s.StoreTop>
                 <s.ItemArea>
                     <s.ItemUl>
-                        {cat[index].data.map(index => (
+                        {cat[0].data.map(index => (
                             <s.ItemLi onClick={() => setPay(true)}>
                                 <s.ImgArea>
                                     <img
