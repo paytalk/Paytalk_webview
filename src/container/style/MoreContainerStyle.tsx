@@ -33,7 +33,7 @@ export const ItemDetailTop = styled.div`
     font-size: 5.5556vw;
     line-height: 8.25vh;
     text-align: center;
-    border-bottom: 1px solid #eeeeee; ;
+    border-bottom: 1px solid #eeeeee;
 `;
 export const UserProfileArea = styled.div`
     display: flex;

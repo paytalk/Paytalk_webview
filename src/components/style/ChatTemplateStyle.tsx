@@ -10,7 +10,7 @@ export const ChatTemplateWrap = styled.div`
     height: 100vh;
     z-index: 2;
     overflow: hidden;
-    background-color: #b6c8d7; ;
+    background-color: #b6c8d7;
 `;
 export const ChatTemplateArea = styled.div`
     width: 100%;
