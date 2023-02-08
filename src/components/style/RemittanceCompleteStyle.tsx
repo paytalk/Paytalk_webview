@@ -1,0 +1,73 @@
+import styled from "styled-components";
+
+export const ExchangeCompleteWrap = styled.div`
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 3;
+    background-color: #fff;
+    background-image: url("https://paytalk.github.io/Paytalk_webview/img/pose 12 view 2.png");
+    background-repeat: no-repeat;
+    background-position: right bottom 14vw;
+    background-size: 50vw;
+`;
+export const Title = styled.div`
+    margin: 1vh 0 8.8889vw 4.4444vw;
+    p {
+        font-family: "Pretendard";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 6.6667vw;
+        line-height: 140%;
+        color: #181818;
+    }
+`;
+export const ExchangeInfoBox = styled.div`
+    width: 91.1111vw;
+    height: 22.2222vw;
+    margin: 0 auto;
+    background: #f8f8f8;
+    border-radius: 8px;
+    padding: 0 4.444vw;
+    div {
+        display: flex;
+        justify-content: space-between;
+        margin: 1.5vh 0;
+    }
+    p {
+        width: 44.4444vw;
+        font-family: "Pretendard";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        color: #000000;
+    }
+    span {
+        font-family: "Pretendard";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 4.444vw;
+        line-height: 140%;
+        text-align: right;
+        color: #000000;
+    }
+`;
+export const Btn = styled.div`
+    position: absolute;
+    bottom: 1vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 91.1111vw;
+    height: 13.3333vw;
+    background: #5c63e5;
+    border-radius: 8px;
+    p {
+        font-family: "Pretendard";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 13.3333vw;
+        text-align: center;
+    }
+    color: #ffffff;
+`;
