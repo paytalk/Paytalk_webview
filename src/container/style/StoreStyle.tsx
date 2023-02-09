@@ -1,15 +1,19 @@
 import styled from "styled-components";
 
 export const StoreContainerWrap = styled.div`
-    height: 100vh;
-    overflow: scroll;
-    position: relative;
+    height: auto;
+    overflow: hidden;
+    position: absolute;
     width: 100%;
     z-index: 0;
     background-color: #fff;
 `;
 
-export const StoreContainerArea = styled.div``;
+export const StoreContainerArea = styled.div`
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+`;
 
 export const StoreContainerTitle = styled.h1`
     font-size: 6.6667vw;

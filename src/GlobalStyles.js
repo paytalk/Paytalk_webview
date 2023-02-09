@@ -41,6 +41,7 @@ const GlobalStyle = createGlobalStyle`
 
 * { margin: 0; padding:0; font-size:10px; -webkit-tap-highlight-color : rgba(0,0,0,0);
 overflow: hidden;
+height: 100vh;
 ::-webkit-scrollbar{
         display: none;
     }
