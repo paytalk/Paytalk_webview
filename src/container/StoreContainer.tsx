@@ -14,6 +14,7 @@ import Img2 from "../Resource/Images/Img2.svg";
 import Img3 from "../Resource/Images/Img3.svg";
 import Img4 from "../Resource/Images/Img4.svg";
 import { sleep } from "../utill";
+import SlickSlider from "../common/SlickSlider";
 
 const category = [
     { title: "키즈", img: "/img/Rectangle 2959.png" },
@@ -59,9 +60,7 @@ const StoreContainer = () => {
                         >
                             스토어
                         </s.StoreContainerTitle>
-                        <s.StoreBanner>
-                            <img src={Banner} />
-                        </s.StoreBanner>
+                        <SlickSlider />
                         {/* <RecommendSection
             title={Data.data.market1_title}
             data={Data.data.product}
