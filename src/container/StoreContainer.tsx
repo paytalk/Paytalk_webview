@@ -1,18 +1,17 @@
 import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import RecommendSection from "../components/Store/RecommendSection";
+
 import * as s from "./style/StoreStyle";
 import * as r from "../components/style/RecommendSectionStyle";
 import { Data } from "../Data/Store_Main1";
 import { Data2 } from "../Data/Store_Main2";
-import StoreDetail from "../components/Store/StoreDetail";
-import StoreDetail2 from "../components/Store/StoreDetail_2";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import Banner from "../Resource/Images/롤링배너.svg";
+import BottomBanner from "../Resource/Images/3_크리에이터 신청.svg";
 import PullToRefresh from "../common/PullToRefresh";
+import Img from "../Resource/Images/Img1.svg";
+import Img2 from "../Resource/Images/Img2.svg";
 import { sleep } from "../utill";
-import { useAppDispatch } from "../useRedux/rootReducer";
 
 const category = [
     { title: "키즈", img: "/img/Rectangle 2959.png" },
@@ -28,11 +27,9 @@ const category = [
 const BaseURL = "https://paytalk.github.io/Paytalk_webview";
 
 const StoreContainer = () => {
-    const [detail2, setDetail2] = useState(false);
-    const [detail3, setDetail3] = useState(false);
     const navigate = useNavigate();
     const [scrollY, setScrollY] = useState(0);
-    const dispath = useAppDispatch();
+
     const handleScroll = () => {
         const scrollPosition = window.pageYOffset;
         setScrollY(scrollPosition);
@@ -60,110 +57,82 @@ const StoreContainer = () => {
                         >
                             스토어
                         </s.StoreContainerTitle>
-                        <s.StoreContainerCategory>
-                            카테고리
-                        </s.StoreContainerCategory>
-                        <s.StoreContainerThe>더보기</s.StoreContainerThe>
-                        <s.StoreCategoryBox>
-                            <s.StoreCategoryUl>
-                                {category.map((index, key) => (
-                                    <s.StoreCategoryLi
-                                        onClick={() => {
-                                            setTimeout(
-                                                () =>
-                                                    navigate(
-                                                        `/store/detail/${key}`
-                                                    ),
-                                                10
-                                            );
-                                            dispath({
-                                                type: "urlDepth",
-                                                payload: "next"
-                                            });
-                                        }}
-                                    >
-                                        <s.StoreCategoryImg>
-                                            <img
-                                                src={`${BaseURL}` + index.img}
-                                                alt="카테고리 이미지"
-                                                key={key}
-                                            />
-                                        </s.StoreCategoryImg>
-                                        <s.StoreCategoryTitle key="title">
-                                            {index.title}
-                                        </s.StoreCategoryTitle>
-                                    </s.StoreCategoryLi>
-                                ))}
-                            </s.StoreCategoryUl>
-                        </s.StoreCategoryBox>
-                        <s.Gubun></s.Gubun>
+                        <s.StoreBanner>
+                            <img src={Banner} />
+                        </s.StoreBanner>
                         {/* <RecommendSection
             title={Data.data.market1_title}
             data={Data.data.product}
             ></RecommendSection> */}
                         <r.StoreRecommendBox>
-                            <r.Title onClick={() => setDetail2(true)}>
-                                <p>{Data.data.market1_title}</p>
-                                <span>더보기</span>
+                            <r.Title>
+                                <p>지금 뜨는 상품 🔥</p>
+                            </r.Title>
+                            <r.StoreRecommendItemBox>
+                                <r.StoreRecommendUl>
+                                    {Data.data.product.map(index => (
+                                        <r.StoreHotLi>
+                                            <r.StoreHotImg>
+                                                <img src={Img2} alt="이미지" />
+                                            </r.StoreHotImg>
+                                            <r.StoreHotTitle>
+                                                KAIST Plus_프리미엄 인지검사 /
+                                                컨설팅 구독권
+                                            </r.StoreHotTitle>
+                                            <r.StoreHotSeller>
+                                                S Meta Math 본점 원장선생님
+                                            </r.StoreHotSeller>
+                                        </r.StoreHotLi>
+                                    ))}
+                                </r.StoreRecommendUl>
+                            </r.StoreRecommendItemBox>
+                        </r.StoreRecommendBox>
+
+                        {/* <RecommendSection
+            title={Data2.data.market2_title}
+            data={Data2.data.product}
+            ></RecommendSection> */}
+                        <r.StoreRecommendBox>
+                            <r.Title>
+                                <p>페이톡 학원 인기 강의 🍭</p>
                             </r.Title>
                             <r.StoreRecommendItemBox>
                                 <r.StoreRecommendUl>
                                     {Data.data.product.map(index => (
                                         <r.StoreRecommendLi>
                                             <r.StoreRecommendImg>
-                                                <img
-                                                    src={
-                                                        `${BaseURL}` +
-                                                        index.image
-                                                    }
-                                                    alt="이미지"
-                                                />
+                                                <img src={Img} alt="이미지" />
                                             </r.StoreRecommendImg>
+                                            <r.StoreRecommendClipArea>
+                                                <r.StoreRecommendClip>
+                                                    NEW
+                                                </r.StoreRecommendClip>
+                                            </r.StoreRecommendClipArea>
                                             <r.StoreRecommendTitle>
-                                                {index.name}
+                                                4세 Gate_C.Gate_Feedback+#1
+                                                (단편) + 커리제공 (얼리버드)
                                             </r.StoreRecommendTitle>
-                                            <r.StoreRecommendCost>
-                                                {index.price}
-                                            </r.StoreRecommendCost>
+                                            <r.StoreRecommendCostArea>
+                                                <r.StoreRecommendFakeCost>
+                                                    880,000원
+                                                </r.StoreRecommendFakeCost>
+                                                <r.StoreRecommendDisCount>
+                                                    16%
+                                                </r.StoreRecommendDisCount>
+                                                <r.StoreRecommendCost>
+                                                    739,200원
+                                                </r.StoreRecommendCost>
+                                            </r.StoreRecommendCostArea>
                                         </r.StoreRecommendLi>
                                     ))}
                                 </r.StoreRecommendUl>
                             </r.StoreRecommendItemBox>
                         </r.StoreRecommendBox>
-                        <s.Gubun></s.Gubun>
-                        {/* <RecommendSection
-            title={Data2.data.market2_title}
-            data={Data2.data.product}
-            ></RecommendSection> */}
-                        <r.StoreRecommendBox>
-                            <r.Title onClick={() => setDetail3(true)}>
-                                <p>{Data2.data.market2_title}</p>
-                                <span>더보기</span>
-                            </r.Title>
-                            <r.StoreRecommendItemBox>
-                                <r.StoreRecommendUl>
-                                    {Data2.data.product.map(index => (
-                                        <r.StoreRecommendLi>
-                                            <r.StoreRecommendImg>
-                                                <img
-                                                    src={
-                                                        `${BaseURL}` +
-                                                        index.image
-                                                    }
-                                                    alt="이미지"
-                                                />
-                                            </r.StoreRecommendImg>
-                                            <r.StoreRecommendTitle>
-                                                {index.name}
-                                            </r.StoreRecommendTitle>
-                                            <r.StoreRecommendCost>
-                                                {index.price}
-                                            </r.StoreRecommendCost>
-                                        </r.StoreRecommendLi>
-                                    ))}
-                                </r.StoreRecommendUl>
-                            </r.StoreRecommendItemBox>
-                        </r.StoreRecommendBox>
+                        <s.BottomBannerArea>
+                            <s.BottomBanner>
+                                <img src={BottomBanner} />
+                            </s.BottomBanner>
+                        </s.BottomBannerArea>
                     </s.StoreContainerArea>
                 </s.StoreContainerWrap>
             </PullToRefresh>

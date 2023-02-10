@@ -16,13 +16,21 @@ export const StoreContainerArea = styled.div`
 `;
 
 export const StoreContainerTitle = styled.h1`
-    font-size: 6.6667vw;
-    margin: 2.9412vh 0 0 4.4444vw;
-    font-family: "Spoqa Han Sans Neo";
+    font-size: 1.8rem;
+    height: 5.8rem;
+    line-height: 5.8rem;
+    margin-left: 1.6rem;
+    font-family: "Pretendard";
     font-style: normal;
     font-weight: 700;
 `;
+export const StoreBanner = styled.div`
+    width: 100%;
 
+    img {
+        width: 100%;
+    }
+`;
 export const StoreContainerCategory = styled.p`
     display: inline-block;
     font-size: 4.4444vw;
@@ -70,10 +78,17 @@ export const StoreCategoryTitle = styled.p`
     font-weight: 700;
     font-size: 14px;
     text-align: center;
-    padding: 0.9804vh 0 1.9608vh 0;
 `;
-export const Gubun = styled.div`
+export const BottomBannerArea = styled.div`
     width: 100%;
-    height: 0.9804vh;
-    background: #eeeeee;
+    height: 13.2rem;
+    padding: 0 1.6rem;
+    margin: 3.6rem 0 2.1rem 0;
+`;
+export const BottomBanner = styled.div`
+    width: 100%;
+    height: 100%;
+    img {
+        width: 100%;
+    }
 `;
