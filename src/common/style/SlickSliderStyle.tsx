@@ -22,11 +22,13 @@ export const StoreBanner = styled.div`
         display: flex !important;
         justify-content: center;
         li {
-            width: 2rem;
+            width: 3rem;
+            height: 3rem;
+
             button {
                 font-size: 0;
-                width: 0.7rem;
-                height: 0.7rem;
+                width: 0.9rem;
+                height: 0.9rem;
                 border-radius: 50%;
                 background: rgba(0, 0, 0, 0.1);
             }
