@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Paytalk_webview/static/css/main.e53243bc.css",
-    "main.js": "/Paytalk_webview/static/js/main.7e24ca22.js",
+    "main.css": "/Paytalk_webview/static/css/main.9fb8c3db.css",
+    "main.js": "/Paytalk_webview/static/js/main.1126e84d.js",
     "index.html": "/Paytalk_webview/index.html",
-    "main.e53243bc.css.map": "/Paytalk_webview/static/css/main.e53243bc.css.map",
-    "main.7e24ca22.js.map": "/Paytalk_webview/static/js/main.7e24ca22.js.map"
+    "main.9fb8c3db.css.map": "/Paytalk_webview/static/css/main.9fb8c3db.css.map",
+    "main.1126e84d.js.map": "/Paytalk_webview/static/js/main.1126e84d.js.map"
   },
   "entrypoints": [
-    "static/css/main.e53243bc.css",
-    "static/js/main.7e24ca22.js"
+    "static/css/main.9fb8c3db.css",
+    "static/js/main.1126e84d.js"
   ]
 }
