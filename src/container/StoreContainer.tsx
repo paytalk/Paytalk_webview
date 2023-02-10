@@ -12,6 +12,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import PullToRefresh from "../common/PullToRefresh";
 import { sleep } from "../utill";
+import { useAppDispatch } from "../useRedux/rootReducer";
 
 const category = [
     { title: "키즈", img: "/img/Rectangle 2959.png" },
@@ -27,13 +28,11 @@ const category = [
 const BaseURL = "https://paytalk.github.io/Paytalk_webview";
 
 const StoreContainer = () => {
-    const [Index, setIndex] = useState(0);
-    const [detail, setDetail] = useState(false);
     const [detail2, setDetail2] = useState(false);
     const [detail3, setDetail3] = useState(false);
     const navigate = useNavigate();
     const [scrollY, setScrollY] = useState(0);
-
+    const dispath = useAppDispatch();
     const handleScroll = () => {
         const scrollPosition = window.pageYOffset;
         setScrollY(scrollPosition);
@@ -70,7 +69,17 @@ const StoreContainer = () => {
                                 {category.map((index, key) => (
                                     <s.StoreCategoryLi
                                         onClick={() => {
-                                            navigate(`/store/detail/${key}`);
+                                            setTimeout(
+                                                () =>
+                                                    navigate(
+                                                        `/store/detail/${key}`
+                                                    ),
+                                                10
+                                            );
+                                            dispath({
+                                                type: "urlDepth",
+                                                payload: "next"
+                                            });
                                         }}
                                     >
                                         <s.StoreCategoryImg>

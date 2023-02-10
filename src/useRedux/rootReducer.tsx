@@ -5,10 +5,12 @@ import {
     ThunkAction
 } from "@reduxjs/toolkit";
 import logger from "redux-logger";
-
+import urlDepthReducer from "../modules/UrlDepth";
 import { useDispatch } from "react-redux";
 
-const reducer = combineReducers({});
+const reducer = combineReducers({
+    urlDepth: urlDepthReducer
+});
 
 const store = configureStore({
     reducer,

@@ -4,7 +4,7 @@ import StoreDetail from "../components/Store/StoreDetail";
 const StoreDetailPage = ({ index }: any) => {
     return (
         <>
-            <StoreDetail index={index} />
+            <StoreDetail />
         </>
     );
 };

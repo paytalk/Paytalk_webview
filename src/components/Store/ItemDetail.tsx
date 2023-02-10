@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as i from "../style/ItemDetailStyle";
@@ -7,6 +7,7 @@ import { De4 } from "../../Data/detail_search_academy";
 import { De6 } from "../../Data/detail_search_pet";
 import { De8 } from "../../Data/detail_search_distribution";
 import PayMent from "./PayMent";
+import { useAppDispatch } from "../../useRedux/rootReducer";
 
 const DB = [De2, De2, De4, De4, De6, De6, De8, De8];
 
@@ -16,29 +17,41 @@ const ItemDetail = ({ setPay, index }: any) => {
     const [modal, setModal] = useState(false);
     const [check, setCheck] = useState(0);
     const [next, setNext] = useState(false);
-
+    const [num, setNum] = useState(0);
     const nav = useNavigate();
+    const dispatch = useAppDispatch();
+    const location = window.location.href.split("/");
+    useEffect(() => {
+        if (location.length === 8) {
+            setNum(parseInt(location[7]));
+        }
+    }, [location]);
 
     return (
         <>
             <i.ItemDetailWrap>
-                <i.BackIcon onClick={() => setPay(false)}></i.BackIcon>
+                <i.BackIcon
+                    onClick={() => {
+                        setTimeout(() => nav(-1), 10);
+                        dispatch({ type: "urlDepth", payload: "prev" });
+                    }}
+                ></i.BackIcon>
                 <i.ItemDetailTop>상세정보</i.ItemDetailTop>
                 <i.ItemArea>
                     <i.ImgArea>
                         <img
                             src={
                                 `${BaseURL}` +
-                                DB[index].data.content_image.content_img1
+                                DB[num].data.content_image.content_img1
                             }
                             alt="이미지"
                         />
                     </i.ImgArea>
-                    <i.ItemTitle>{DB[index].data.name}</i.ItemTitle>
+                    <i.ItemTitle>{DB[num].data.name}</i.ItemTitle>
                     <i.Cost>
-                        <p>{DB[index].data.price}</p>
+                        <p>{DB[num].data.price}</p>
                         <p>
-                            <span>{DB[index].data.price} (최대 3회)</span>
+                            <span>{DB[num].data.price} (최대 3회)</span>
                         </p>
                     </i.Cost>
                     <i.BtnArea>
@@ -100,11 +113,9 @@ const ItemDetail = ({ setPay, index }: any) => {
             </i.ItemDetailWrap>
             {next ? (
                 <PayMent
-                    title={DB[index].data.name}
-                    price={DB[index].data.price}
-                    img={
-                        `${BaseURL}` + DB[index].data.content_image.content_img1
-                    }
+                    title={DB[num].data.name}
+                    price={DB[num].data.price}
+                    img={`${BaseURL}` + DB[num].data.content_image.content_img1}
                     setNext={setNext}
                 />
             ) : (
