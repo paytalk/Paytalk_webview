@@ -1,17 +1,19 @@
 {
   "files": {
     "main.css": "/Paytalk_webview/static/css/main.cda4ba12.css",
-    "main.js": "/Paytalk_webview/static/js/main.d3da3e2e.js",
+    "main.js": "/Paytalk_webview/static/js/main.b22e2b7b.js",
     "static/media/3_크리에이터 신청.svg": "/Paytalk_webview/static/media/3_크리에이터 신청.fdcb305106ed18fe77148abec6fae816.svg",
     "static/media/Img2.svg": "/Paytalk_webview/static/media/Img2.555f0edb55ac96b9962ab74b055d0b0b.svg",
     "static/media/Img1.svg": "/Paytalk_webview/static/media/Img1.b2eb8e0b3fe113a73cd401b7918cb39a.svg",
     "static/media/롤링배너.svg": "/Paytalk_webview/static/media/롤링배너.32f0a99bbbc32153d5376f7c2fc9ab93.svg",
+    "static/media/Img3.svg": "/Paytalk_webview/static/media/Img3.4d0d93ac940cb5a53e30d16a783ee6cc.svg",
+    "static/media/Img4.svg": "/Paytalk_webview/static/media/Img4.ef10cc9a51102d69efb092cf21206c5b.svg",
     "index.html": "/Paytalk_webview/index.html",
     "main.cda4ba12.css.map": "/Paytalk_webview/static/css/main.cda4ba12.css.map",
-    "main.d3da3e2e.js.map": "/Paytalk_webview/static/js/main.d3da3e2e.js.map"
+    "main.b22e2b7b.js.map": "/Paytalk_webview/static/js/main.b22e2b7b.js.map"
   },
   "entrypoints": [
     "static/css/main.cda4ba12.css",
-    "static/js/main.d3da3e2e.js"
+    "static/js/main.b22e2b7b.js"
   ]
 }
