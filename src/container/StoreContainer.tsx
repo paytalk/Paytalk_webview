@@ -69,7 +69,7 @@ const StoreContainer = () => {
                                 <p>지금 뜨는 상품 🔥</p>
                             </r.Title>
                             <r.StoreRecommendItemBox>
-                                <r.StoreRecommendUl>
+                                <r.StoreHotUl>
                                     {Data.data.product.map(index => (
                                         <r.StoreHotLi>
                                             <r.StoreHotImg>
@@ -84,7 +84,7 @@ const StoreContainer = () => {
                                             </r.StoreHotSeller>
                                         </r.StoreHotLi>
                                     ))}
-                                </r.StoreRecommendUl>
+                                </r.StoreHotUl>
                             </r.StoreRecommendItemBox>
                         </r.StoreRecommendBox>
 

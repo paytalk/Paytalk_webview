@@ -33,16 +33,24 @@ export const StoreRecommendUl = styled.ul`
     display: inline-flex;
     justify-content: space-between;
 `;
+export const StoreHotUl = styled.ul`
+    display: inline-flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+`;
 export const StoreHotLi = styled.li`
-    width: 16.8rem;
-    height: 16rem;
+    width: 45%;
+    height: 15.8rem;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     margin-top: 1.6rem;
     margin-bottom: 1.6rem;
     margin-left: 1.6rem;
 `;
 export const StoreHotImg = styled.div`
     width: 100%;
-    height: 9.6rem;
+
     border-radius: 8px;
     img {
         width: 100%;
@@ -58,6 +66,8 @@ export const StoreHotTitle = styled.div`
     /* or 133% */
     word-break: keep-all;
     /* Gray99 */
+    margin-left: 1.6rem;
+    margin-top: 0.4rem;
 `;
 export const StoreHotSeller = styled.div`
     font-family: "Inter";
@@ -66,14 +76,14 @@ export const StoreHotSeller = styled.div`
     font-size: 11px;
     line-height: 14px;
     /* identical to box height, or 127% */
-
+    margin-left: 1.6rem;
     /* Gray60 */
     margin-top: 0.6rem;
     color: #929292;
 `;
 export const StoreRecommendLi = styled.li`
-    width: 20rem;
-    height: 28.8rem;
+    width: 19.2rem;
+    height: 28.6rem;
     margin-top: 1.6rem;
     margin-bottom: 1.6rem;
     margin-left: 1.6rem;
@@ -85,8 +95,8 @@ export const StoreRecommendLi = styled.li`
     }
 `;
 export const StoreRecommendImg = styled.div`
-    width: 20rem;
-    height: 12.8rem;
+    width: 19.2rem;
+    height: 10.8rem;
 
     border-radius: 16px;
     img {
