@@ -15,7 +15,7 @@ export const Title = styled.div`
     justify-content: space-between;
     margin: 0rem 0 0 1.6rem;
     &:nth-child(1) {
-        margin: 4rem 0 0 1.6rem;
+        margin: 3.6rem 0 0.4rem 1.6rem;
     }
     span {
         font-family: "Spoqa Han Sans Neo";
@@ -41,11 +41,10 @@ export const StoreHotUl = styled.ul`
 export const StoreHotLi = styled.li`
     width: 45%;
     height: 15.8rem;
-    background: #ffffff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
     border-radius: 8px;
-    margin-top: 1.6rem;
-    margin-bottom: 1.6rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
     margin-left: 1.6rem;
 `;
 export const StoreHotImg = styled.div`
@@ -54,7 +53,9 @@ export const StoreHotImg = styled.div`
     border-radius: 8px;
     img {
         width: 100%;
+        max-height: 9.4rem;
         border-radius: 8px;
+        object-fit: cover;
     }
 `;
 export const StoreHotTitle = styled.div`
@@ -65,8 +66,14 @@ export const StoreHotTitle = styled.div`
     line-height: 16px;
     /* or 133% */
     word-break: keep-all;
-    /* Gray99 */
-    margin-left: 1.6rem;
+    height: 3.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    word-break: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
     margin-top: 0.4rem;
 `;
 export const StoreHotSeller = styled.div`
@@ -76,9 +83,9 @@ export const StoreHotSeller = styled.div`
     font-size: 11px;
     line-height: 14px;
     /* identical to box height, or 127% */
-    margin-left: 1.6rem;
+
     /* Gray60 */
-    margin-top: 0.6rem;
+    margin-top: 0.8rem;
     color: #929292;
 `;
 export const StoreRecommendLi = styled.li`

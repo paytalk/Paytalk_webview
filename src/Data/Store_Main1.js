@@ -3,7 +3,7 @@ export const Data = {
         market1_title: "지금 뜨고있는 구독",
         product: [
             {
-                image: "/img/Marketing_sub1/1.png",
+                image: "/Resource/Images/Img1.svg",
                 name: "삼성 에어컨",
                 price: "월 35,000원",
                 id: "market1_01"
@@ -15,7 +15,7 @@ export const Data = {
                 id: "market1_02"
             },
             {
-                image: "/img/Marketing_sub1/3.png",
+                image: "/Resource/Images/Img2.svg",
                 name: "어린이 창의융합 프로그램(6세)",
                 price: "월 50,000원",
                 id: "market1_03"

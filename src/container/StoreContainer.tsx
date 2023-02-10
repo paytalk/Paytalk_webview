@@ -11,6 +11,8 @@ import BottomBanner from "../Resource/Images/3_크리에이터 신청.svg";
 import PullToRefresh from "../common/PullToRefresh";
 import Img from "../Resource/Images/Img1.svg";
 import Img2 from "../Resource/Images/Img2.svg";
+import Img3 from "../Resource/Images/Img3.svg";
+import Img4 from "../Resource/Images/Img4.svg";
 import { sleep } from "../utill";
 
 const category = [
@@ -70,10 +72,10 @@ const StoreContainer = () => {
                             </r.Title>
                             <r.StoreRecommendItemBox>
                                 <r.StoreHotUl>
-                                    {Data.data.product.map(index => (
+                                    {/* {Data.data.product.map(index => (
                                         <r.StoreHotLi>
                                             <r.StoreHotImg>
-                                                <img src={Img2} alt="이미지" />
+                                                <img src={} alt="이미지" />
                                             </r.StoreHotImg>
                                             <r.StoreHotTitle>
                                                 KAIST Plus_프리미엄 인지검사 /
@@ -83,7 +85,55 @@ const StoreContainer = () => {
                                                 S Meta Math 본점 원장선생님
                                             </r.StoreHotSeller>
                                         </r.StoreHotLi>
-                                    ))}
+                                    ))} */}
+                                    <r.StoreHotLi>
+                                        <r.StoreHotImg>
+                                            <img src={Img2} alt="이미지" />
+                                        </r.StoreHotImg>
+                                        <r.StoreHotTitle>
+                                            본수업(영태대비3회 포함) 피닉스30권,
+                                            스피킹 20권, 시험정보...
+                                        </r.StoreHotTitle>
+                                        <r.StoreHotSeller>
+                                            Sadie
+                                        </r.StoreHotSeller>
+                                    </r.StoreHotLi>
+                                    <r.StoreHotLi>
+                                        <r.StoreHotImg>
+                                            <img src={Img2} alt="이미지" />
+                                        </r.StoreHotImg>
+                                        <r.StoreHotTitle>
+                                            KAIST Plus_프리미엄 인지검사 /
+                                            컨설팅 구독권
+                                        </r.StoreHotTitle>
+                                        <r.StoreHotSeller>
+                                            Sadie
+                                        </r.StoreHotSeller>
+                                    </r.StoreHotLi>
+                                    <r.StoreHotLi>
+                                        <r.StoreHotImg>
+                                            <img src={Img3} alt="이미지" />
+                                        </r.StoreHotImg>
+                                        <r.StoreHotTitle>
+                                            KAIST Plus_프리미엄 인지검사 /
+                                            컨설팅 구독권
+                                        </r.StoreHotTitle>
+                                        <r.StoreHotSeller>
+                                            S Meta Math 본점 원장선생님
+                                        </r.StoreHotSeller>
+                                    </r.StoreHotLi>
+                                    <r.StoreHotLi>
+                                        <r.StoreHotImg>
+                                            <img src={Img4} alt="이미지" />
+                                        </r.StoreHotImg>
+                                        <r.StoreHotTitle>
+                                            KAIST Plus_프리미엄 인지검사 /
+                                            컨설팅 구독권
+                                        </r.StoreHotTitle>
+                                        <r.StoreHotSeller>
+                                            S Meta Math 본점 원장선생님
+                                        </r.StoreHotSeller>
+                                    </r.StoreHotLi>
                                 </r.StoreHotUl>
                             </r.StoreRecommendItemBox>
                         </r.StoreRecommendBox>
