@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Paytalk_webview/static/css/main.cda4ba12.css",
-    "main.js": "/Paytalk_webview/static/js/main.e288e592.js",
+    "main.js": "/Paytalk_webview/static/js/main.4bf9baf3.js",
     "static/media/3_크리에이터 신청.svg": "/Paytalk_webview/static/media/3_크리에이터 신청.fdcb305106ed18fe77148abec6fae816.svg",
     "static/media/4.svg": "/Paytalk_webview/static/media/4.ea50339379b6fb19e9fe64498adc0ffa.svg",
     "static/media/1.svg": "/Paytalk_webview/static/media/1.95c7642bb01bbb623df23579c2674369.svg",
@@ -13,10 +13,10 @@
     "static/media/Img4.svg": "/Paytalk_webview/static/media/Img4.ef10cc9a51102d69efb092cf21206c5b.svg",
     "index.html": "/Paytalk_webview/index.html",
     "main.cda4ba12.css.map": "/Paytalk_webview/static/css/main.cda4ba12.css.map",
-    "main.e288e592.js.map": "/Paytalk_webview/static/js/main.e288e592.js.map"
+    "main.4bf9baf3.js.map": "/Paytalk_webview/static/js/main.4bf9baf3.js.map"
   },
   "entrypoints": [
     "static/css/main.cda4ba12.css",
-    "static/js/main.e288e592.js"
+    "static/js/main.4bf9baf3.js"
   ]
 }
