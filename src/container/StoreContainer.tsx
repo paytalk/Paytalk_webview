@@ -15,6 +15,7 @@ import Img3 from "../Resource/Images/Img3.svg";
 import Img4 from "../Resource/Images/Img4.svg";
 import { sleep } from "../utill";
 import SlickSlider from "../common/SlickSlider";
+import { useAppDispatch } from "../useRedux/rootReducer";
 
 const category = [
     { title: "키즈", img: "/img/Rectangle 2959.png" },
@@ -30,9 +31,9 @@ const category = [
 const BaseURL = "https://paytalk.github.io/Paytalk_webview";
 
 const StoreContainer = () => {
-    const navigate = useNavigate();
+    const nav = useNavigate();
     const [scrollY, setScrollY] = useState(0);
-
+    const dispatch = useAppDispatch();
     const handleScroll = () => {
         const scrollPosition = window.pageYOffset;
         setScrollY(scrollPosition);
@@ -55,11 +56,7 @@ const StoreContainer = () => {
             <PullToRefresh onRefresh={mutate}>
                 <s.StoreContainerWrap>
                     <s.StoreContainerArea>
-                        <s.StoreContainerTitle
-                            onClick={() => console.log(scrollY)}
-                        >
-                            스토어
-                        </s.StoreContainerTitle>
+                        <s.StoreContainerTitle>스토어</s.StoreContainerTitle>
                         <SlickSlider />
                         {/* <RecommendSection
             title={Data.data.market1_title}
@@ -85,7 +82,18 @@ const StoreContainer = () => {
                                             </r.StoreHotSeller>
                                         </r.StoreHotLi>
                                     ))} */}
-                                    <r.StoreHotLi>
+                                    <r.StoreHotLi
+                                        onClick={() => {
+                                            setTimeout(
+                                                () => nav("/store/item/1"),
+                                                10
+                                            );
+                                            dispatch({
+                                                type: "urlDepth",
+                                                payload: "next"
+                                            });
+                                        }}
+                                    >
                                         <r.StoreHotImg>
                                             <img src={Img2} alt="이미지" />
                                         </r.StoreHotImg>
